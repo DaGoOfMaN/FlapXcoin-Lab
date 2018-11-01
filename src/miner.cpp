@@ -8,6 +8,8 @@
 #include "miner.h"
 #include "kernel.h"
 #include "util.h"
+#include <memory>
+
 using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
@@ -127,7 +129,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
     if (!fProofOfStake)
     {
-        // Netcoin: all PoW blocks are version 2
+        // FlapX: all PoW blocks are version 2
         pblock->nVersion = 2;
 
         // CReserveKey reservekey(pwallet);
@@ -364,7 +366,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
         nLastBlockSize = nBlockSize;
 
         if (fDebug && GetBoolArg("-printpriority"))
-            printf("CreateNewBlock(): total size %"PRI64u"\n", nBlockSize);
+            printf("CreateNewBlock(): total size %" PRIu64 "\n", nBlockSize);
 
         if (!fProofOfStake)
             pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pindexPrev->nHeight+1, nFees, pindexPrev->GetBlockHash());
@@ -532,7 +534,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("netcoin-miner");
+    RenameThread("flapx-miner");
 
     CReserveKey reservekey(pwallet);
 
@@ -571,7 +573,7 @@ void ThreadStakeMiner(CWallet *pwallet)
             }
         }
 
-        //netcoin - Wait until POS activation block height is reached
+        // flapx - Wait until POS activation block height is reached
         if (nBestHeight < (!TestNet() ? BLOCK_HEIGHT_POS_AND_DIGISHIELD_START : BLOCK_HEIGHT_POS_AND_DIGISHIELD_START_TESTNET))
         {
             MilliSleep(60000);

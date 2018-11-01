@@ -31,11 +31,17 @@
 
 #include "netbase.h" // for AddTimeData
 
-// to obtain PRI64d on some old systems
+// to obtain PRId64 on some old systems
 #define __STDC_FORMAT_MACROS 1
 
 #include <stdint.h>
 #include <inttypes.h>
+//if it still fails with STDC_FORMAT_MACROS try to whing it...
+#ifndef PRId64
+#define PRId64  "lld"
+#define PRIu64  "llu"
+#define PRIx64  "llx"
+#endif
 
 static const int64_t COIN = 100000000;
 static const int64_t CENT = 1000000;
@@ -62,9 +68,6 @@ void LogStackTrace();
 
 
 #if defined(_MSC_VER) || defined(__MSVCRT__)
-#define PRI64d  "I64d"
-#define PRI64u  "I64u"
-#define PRI64x  "I64x"
   #define PRIszx    "Ix"
   #define PRIszu    "Iu"
   #define PRIszd    "Id"
@@ -72,9 +75,6 @@ void LogStackTrace();
   #define PRIpdu    "Iu"
   #define PRIpdd    "Id"
 #else
-#define PRI64d  "lld"
-#define PRI64u  "llu"
-#define PRI64x  "llx"
   #define PRIszx    "zx"
   #define PRIszu    "zu"
   #define PRIszd    "zd"
@@ -241,7 +241,7 @@ void runCommand(std::string strCommand);
 
 inline std::string i64tostr(int64_t n)
 {
-    return strprintf("%"PRI64d, n);
+    return strprintf("%" PRId64, n);
 }
 
 inline std::string itostr(int n)
@@ -584,7 +584,7 @@ inline uint32_t ByteReverse(uint32_t value)
 //    threadGroup.create_thread(boost::bind(&LoopForever<boost::function<void()> >, "nothing", f, milliseconds));
 template <typename Callable> void LoopForever(const char* name,  Callable func, int64_t msecs)
 {
-    std::string s = strprintf("netcoin-%s", name);
+    std::string s = strprintf("flapx-%s", name);
     RenameThread(s.c_str());
     printf("%s thread start\n", name);
     try

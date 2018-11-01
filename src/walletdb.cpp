@@ -104,9 +104,9 @@ void CWalletDB::ListAccountCreditDebit(const string& strAccount, list<CAccountin
             break;
 
         ssValue >> acentry;
-        // Added in NetcoinPOS
+        // Added in FlapXPOS
         ssKey >> acentry.nEntryNo;
-        // End Added in NetcoinPOS
+        // End Added in FlapXPOS
         entries.push_back(acentry);
     }
 
@@ -265,7 +265,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
 
                 //// debug print
                 //printf("LoadWallet  %s\n", wtx.GetHash().ToString().c_str());
-            //printf(" %12"PRI64d"  %s  %s  %s\n",
+            //printf(" %12" PRId64 "  %s  %s  %s\n",
                 //    wtx.vout[0].nValue,
                 //    DateTimeStrFormat("%x %H:%M:%S", wtx.GetBlockTime()).c_str(),
                 //    wtx.hashBlock.ToString().c_str(),
@@ -279,7 +279,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
                 ssKey >> nNumber;
                 if (nNumber > nAccountingEntryNumber)
                     nAccountingEntryNumber = nNumber;
-            // Added in NetcoinPOS
+            // Added in FlapXPOS
             if (!wss.fAnyUnordered)
             {
                 CAccountingEntry acentry;
@@ -287,7 +287,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
                 if (acentry.nOrderPos == -1)
                     wss.fAnyUnordered = true;
             }
-			// end added in NetcoinPOS
+			// end added in FlapXPOS
 
             }
             else if (strType == "key" || strType == "wkey")
@@ -445,10 +445,10 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             {
                 int64_t nIndex;
                 ssKey >> nIndex;
-				// Added in NetcoinPOS
+				// Added in FlapXPOS
             	CKeyPool keypool;
             	ssValue >> keypool;
-				// End Added in NetcoinPOS
+				// End Added in FlapXPOS
                 pwallet->setKeyPool.insert(nIndex);
 
             // If no metadata exists yet, create a default with the pool key's
@@ -627,7 +627,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("netcoin-wallet");
+    RenameThread("flapx-wallet");
 
     // const string& strFile = ((const string*)parg)[0];
     static bool fOneThread;
@@ -679,7 +679,7 @@ void ThreadFlushWalletDB(const string& strFile)
                         bitdb.CheckpointLSN(strFile);
 
                         bitdb.mapFileUseCount.erase(mi++);
-                        printf("Flushed wallet.dat %"PRI64d"ms\n", GetTimeMillis() - nStart);
+                        printf("Flushed wallet.dat %" PRId64 "ms\n", GetTimeMillis() - nStart);
                     }
                 }
             }
@@ -740,7 +740,7 @@ bool CWalletDB::Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys)
     // Set -rescan so any missing transactions will be
     // found.
     int64_t now = GetTime();
-    std::string newFilename = strprintf("wallet.%"PRI64d".bak", now);
+    std::string newFilename = strprintf("wallet.%" PRId64 ".bak", now);
 
     int result = dbenv.dbenv.dbrename(NULL, filename.c_str(), NULL,
                                       newFilename.c_str(), DB_AUTO_COMMIT);
@@ -759,7 +759,7 @@ bool CWalletDB::Recover(CDBEnv& dbenv, std::string filename, bool fOnlyKeys)
         printf("Salvage(aggressive) found no records in %s.\n", newFilename.c_str());
         return false;
     }
-    printf("Salvage(aggressive) found %"PRIszu" records\n", salvagedData.size());
+    printf("Salvage(aggressive) found %" PRIszu " records\n", salvagedData.size());
 
     bool fSuccess = allOK;
     Db* pdbCopy = new Db(&dbenv.dbenv, 0);

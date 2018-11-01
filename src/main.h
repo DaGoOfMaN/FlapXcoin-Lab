@@ -3,6 +3,7 @@
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 Florincoin Developers
 // Copyright (c) 2013-2014 NetCoin Developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCOIN_MAIN_H
@@ -55,11 +56,12 @@ static const int64_t MIN_TX_FEE = 1000000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t DUST_SOFT_LIMIT = 100000000;
 static const int64_t DUST_HARD_LIMIT = 1000000;
-static const int64_t MAX_MONEY = 325000000 * COIN; // NetCoin: maximum of 325M coins
+static const int64_t MAX_MONEY = 2000000000 * COIN; // FlapX: maximum of 325M coins
 static const int64_t MIN_TXOUT_AMOUNT = MIN_TX_FEE;
+static const int64_t PREMINE = 1172000000 * COIN;
 
 
-// Netcoin PIR personal staking interest rate is organised into percentage reward bands based on the value of the coins being staked
+// FlapX PIR personal staking interest rate is organised into percentage reward bands based on the value of the coins being staked
 // madprofezzor@gmail.com
 
 static const int PIR_LEVELS = 6; // number of entries in PIR_THRESHOLDS
@@ -73,12 +75,12 @@ static const int64_t PIR_THRESHOLDS[PIR_LEVELS] = {
     100000,
     1000000,
     10000000
-}; // unit is netcoins.  Must start with 0
+}; // unit is flapxs.  Must start with 0
 
 static const int64_t PIR_RATES[PIR_PHASES][PIR_LEVELS] = {
-        {10,15,20,30,80,100},   // Year 1
-        {20,25,30,35,40,45 },   // Year 2
-        {2,4,6,7,8,10 }    // Year 3+
+        {17,15,13,10,13,15},   // Year 1
+        {15,13,11,9,11,13},    // Year 2
+        {13,11,9,7,9,11}       // Year 3+
 };
 
 
@@ -86,7 +88,7 @@ inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MO
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 
 
-// netcoin Coin Age uses a diminishing returns rule to encourage and reward frequent staking attempts
+// flapx Coin Age uses a diminishing returns rule to encourage and reward frequent staking attempts
 static const int COINAGE_TIME_DILATION_HALFLIFE_DAYS = 90;
 static const int COINAGE_FULL_REWARD_DAYS = 30;
 
@@ -96,11 +98,11 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const int BLOCK_HEIGHT_KGW_START = 218500; // HISTORICAL HARD FORK. DO NOT CHANGE
-static const int BLOCK_HEIGHT_POS_AND_DIGISHIELD_START = 420000; //POS + DIGISHIELD HISTORICAL FORK
-static const int BLOCK_HEIGHT_DIGISHIELD_FIX_START = 438500; //DIGISHIELD FIX FORK
-static const int BLOCK_HEIGHT_FINALPOW =  2500000; // this is where the proof of work ends.
-static const int LOW_S_CHECK_SIGNATURES = 1300000; // CHECK SIGNATURE FORK
+static const int BLOCK_HEIGHT_KGW_START = 1000; // HISTORICAL HARD FORK. DO NOT CHANGE
+static const int BLOCK_HEIGHT_POS_AND_DIGISHIELD_START = 1042; //POS + DIGISHIELD HISTORICAL FORK
+static const int BLOCK_HEIGHT_DIGISHIELD_FIX_START = 1100; //DIGISHIELD FIX FORK
+static const int BLOCK_HEIGHT_FINALPOW = 10000000; // WHAT EVER HEIGHT U WANT TO DIE OFF; // this is where the proof of work ends.
+static const int LOW_S_CHECK_SIGNATURES = 1300000; // CHECK SIGNATURE FORK (TY REG)
 
 static const int BLOCK_HEIGHT_KGW_START_TESTNET = 5;
 static const int BLOCK_HEIGHT_POS_AND_DIGISHIELD_START_TESTNET =10;
@@ -408,15 +410,15 @@ public:
      */
     int64_t GetValueIn(const MapPrevTx& mapInputs) const;
 
-    // Netcoin nVersion=1 and 2
+    // FlapX nVersion=1 and 2
     static bool AllowFree(double dPriority)
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
         // need a fee.
-        return dPriority > COIN * 1440 / 250; // NetCoin: 1440 blocks found a day. Priority cutoff is 1 netcoin day / 250 bytes.
+        return dPriority > COIN * 1440 / 250; // FlapX: 1440 blocks found a day. Priority cutoff is 1 flapx day / 250 bytes.
     }
 
-    // Netcoin nVersion=1 and 2
+    // FlapX nVersion=1 and 2
     int64_t GetMinFee(unsigned int nBlockSize, enum GetMinFee_mode mode, unsigned int nBytes, bool fAllowFree) const;
     int64_t GetMinFee(unsigned int nBlockSize=1, bool fAllowFree=true, enum GetMinFee_mode mode=GMF_BLOCK) const;
 
@@ -473,7 +475,7 @@ public:
     {
         std::string str;
         str += IsCoinBase()? "Coinbase" : (IsCoinStake()? "Coinstake" : "CTransaction");
-        str += strprintf("(hash=%s, nTime=no, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%d, strComment=%s)\n",
+        str += strprintf("(hash=%s, nTime=no, ver=%d, vin.size=%" PRIszu ", vout.size=%" PRIszu ", nLockTime=%d, strComment=%s)\n",
             GetHash().ToString().c_str(),
             nVersion,
             vin.size(),
@@ -933,7 +935,7 @@ public:
 
     void print() const
     {
-        printf("CBlock(hash=%s, PoW=%s, ver=%d, hashPrevBlock=%s, hashMerkleRoot=%s, nTime=%u, nBits=%08x, nNonce=%u, vtx=%"PRI64u", vchBlockSig=%s)\n",
+        printf("CBlock(hash=%s, PoW=%s, ver=%d, hashPrevBlock=%s, hashMerkleRoot=%s, nTime=%u, nBits=%08x, nNonce=%u, vtx=%" PRIu64 ", vchBlockSig=%s)\n",
             GetHash().ToString().c_str(),
             GetPoWHash().ToString().c_str(),
             nVersion,
@@ -1193,7 +1195,7 @@ public:
 
     std::string ToString() const
     {
-        return strprintf("CBlockIndex(nprev=%p, pnext=%p, nFile=%u, nBlockPos=%-6d nHeight=%d, nMint=%s, nMoneySupply=%s, nFlags=(%s)(%d)(%s), nStakeModifier=%"PRI64x", nStakeModifierChecksum=%08x, hashProof=%s, prevoutStake=(%s), nStakeTime=%d merkle=%s, hashBlock=%s)",
+        return strprintf("CBlockIndex(nprev=%p, pnext=%p, nFile=%u, nBlockPos=%-6d nHeight=%d, nMint=%s, nMoneySupply=%s, nFlags=(%s)(%d)(%s), nStakeModifier=%" PRIx64 ", nStakeModifierChecksum=%08x, hashProof=%s, prevoutStake=(%s), nStakeTime=%d merkle=%s, hashBlock=%s)",
             pprev, pnext, nFile, nBlockPos, nHeight,
             FormatMoney(nMint).c_str(), FormatMoney(nMoneySupply).c_str(),
             GeneratedStakeModifier() ? "MOD" : "-", GetStakeEntropyBit(), IsProofOfStake()? "PoS" : "PoW",
@@ -1243,23 +1245,21 @@ public:
         READWRITE(nFile);
         READWRITE(nBlockPos);
         READWRITE(nHeight);
-        if (nVersion>=BLOCKINDEX_VERSION_POS){
-		    READWRITE(nMint);
-	        READWRITE(nMoneySupply);
-	        READWRITE(nFlags);
-	        READWRITE(nStakeModifier);
-	        if (IsProofOfStake())
-	        {
-	            READWRITE(prevoutStake);
-	            READWRITE(nStakeTime);
-	        }
-	        else if (fRead)
-	        {
-	            const_cast<CDiskBlockIndex*>(this)->prevoutStake.SetNull();
-	            const_cast<CDiskBlockIndex*>(this)->nStakeTime = 0;
-	        }
-	        READWRITE(hashProof);	
-		}
+	READWRITE(nMint);
+        READWRITE(nMoneySupply);
+        READWRITE(nFlags);
+        READWRITE(nStakeModifier);
+        if (IsProofOfStake())
+        {
+            READWRITE(prevoutStake);
+            READWRITE(nStakeTime);
+        }
+        else if (fRead)
+        {
+            const_cast<CDiskBlockIndex*>(this)->prevoutStake.SetNull();
+            const_cast<CDiskBlockIndex*>(this)->nStakeTime = 0;
+        }
+        READWRITE(hashProof);	
 
         // block header
         READWRITE(this->nVersion);
@@ -1268,9 +1268,7 @@ public:
         READWRITE(nTime);
         READWRITE(nBits);
         READWRITE(nNonce);
-        if (nVersion>=BLOCKINDEX_VERSION_POS){
-		  READWRITE(blockHash);
-		}
+	READWRITE(blockHash);
     )
 
     uint256 GetBlockHash() const
@@ -1418,7 +1416,6 @@ public:
                     return hash;
             }
         }
-        // return (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet);
         return Params().HashGenesisBlock();
     }
 

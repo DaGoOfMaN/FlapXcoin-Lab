@@ -102,36 +102,6 @@ bool
 Test_CalcParamSizes()
 {
 	bool result = true;
-#if 0
-
-	uint32_t pLen, qLen;
-
-	try {
-		calculateGroupParamLengths(4000, 80, &pLen, &qLen);
-		if (pLen < 1024 || qLen < 256) {
-			result = false;
-		}
-		calculateGroupParamLengths(4000, 96, &pLen, &qLen);
-		if (pLen < 2048 || qLen < 256) {
-			result = false;
-		}
-		calculateGroupParamLengths(4000, 112, &pLen, &qLen);
-		if (pLen < 3072 || qLen < 320) {
-			result = false;
-		}
-		calculateGroupParamLengths(4000, 120, &pLen, &qLen);
-		if (pLen < 3072 || qLen < 320) {
-			result = false;
-		}
-		calculateGroupParamLengths(4000, 128, &pLen, &qLen);
-		if (pLen < 3072 || qLen < 320) {
-			result = false;
-		}
-	} catch (exception &e) {
-		result = false;
-	}
-#endif
-
 	return result;
 }
 
@@ -384,7 +354,6 @@ Test_RunAllTests()
 	printf("ZeroCoin v%s self-test routine\n", ZEROCOIN_VERSION_STRING);
 
 	// Make a new set of parameters from a random RSA modulus
-	//g_Params = new Params(GetTestModulus());
 	g_Params = ZCParams;
 
 	gNumTests = gSuccessfulTests = gProofSize = 0;

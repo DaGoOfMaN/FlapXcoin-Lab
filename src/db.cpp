@@ -8,8 +8,6 @@
 #include "db.h"
 #include "net.h"
 #include "util.h"
-// #include "main.h"
-// #include "ui_interface.h"
 #include "hash.h"
 #include "addrman.h"
 
@@ -70,8 +68,6 @@ bool CDBEnv::Open(boost::filesystem::path pathEnv_)
     if (fDbEnvInit)
         return true;
 
-    // if (fShutdown)
-    //    return false;
     boost::this_thread::interruption_point();
 
     pathEnv = pathEnv_;
@@ -483,12 +479,6 @@ void CDBEnv::Flush(bool fShutdown)
                 CloseDb(strFile);
                 printf("%s checkpoint\n", strFile.c_str());
                 dbenv.txn_checkpoint(0, 0, 0);
-    /*            if (!IsChainFile(strFile) || fDetachDB) {
-                    printf("%s detach\n", strFile.c_str());
-                if (!fMockDb)
-                    dbenv.lsn_reset(strFile.c_str(), 0);
-                }
-     */
                 printf("%s detach\n", strFile.c_str());
                 if (!fMockDb)
                     dbenv.lsn_reset(strFile.c_str(), 0);
@@ -498,7 +488,7 @@ void CDBEnv::Flush(bool fShutdown)
             else
                 mi++;
         }
-        printf("DBFlush(%s)%s ended %15"PRI64d"ms\n", fShutdown ? "true" : "false", fDbEnvInit ? "" : " db not started", GetTimeMillis() - nStart);
+        printf("DBFlush(%s)%s ended %15" PRId64 "ms\n", fShutdown ? "true" : "false", fDbEnvInit ? "" : " db not started", GetTimeMillis() - nStart);
         if (fShutdown)
         {
             char** listp;
@@ -516,8 +506,6 @@ void CDBEnv::Flush(bool fShutdown)
 // CAddrDB
 //
 
-// unsigned char CAddrDB::pchMessageStart[4] = { 0x00, 0x00, 0x00, 0x00 };
-
 CAddrDB::CAddrDB()
 {
     pathAddr = GetDataDir() / "peers.dat";
@@ -532,8 +520,6 @@ bool CAddrDB::Write(const CAddrMan& addr)
 
     // serialize addresses, checksum data up to that point, then append csum
     CDataStream ssPeers(SER_DISK, CLIENT_VERSION);
-    // ssPeers << FLATDATA(pchMessageStart);
-    // ssPeers << FLATDATA(CAddrDB::pchMessageStart);
     ssPeers << FLATDATA(Params().MessageStart());
     ssPeers << addr;
     uint256 hash = Hash(ssPeers.begin(), ssPeers.end());
@@ -572,7 +558,6 @@ bool CAddrDB::Read(CAddrMan& addr)
         return error("CAddrman::Read() : open failed");
 
     // use file size to size memory buffer
-    // int fileSize = GetFilesize(filein);
     int fileSize = boost::filesystem::file_size(pathAddr);
     int dataSize = fileSize - sizeof(uint256);
     // Don't try to resize to a negative number if file is small
@@ -609,7 +594,6 @@ bool CAddrDB::Read(CAddrMan& addr)
     }
 
     // finally, verify the network matches ours
-    // if (memcmp(pchMsgTmp, CAddrDB::pchMessageStart, sizeof(pchMsgTmp)))
     if (memcmp(pchMsgTmp, Params().MessageStart(), sizeof(pchMsgTmp)))
         return error("CAddrman::Read() : invalid network magic number");
 

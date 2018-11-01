@@ -143,7 +143,7 @@ OBJS= \
 
 
 
-all: netcoind
+all: flapxd
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -172,7 +172,7 @@ obj/%.o: %.cpp
               -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
           rm -f $(@:%.o=%.d)
 
-netcoind: $(OBJS:obj/%=obj/%)
+flapxd: $(OBJS:obj/%=obj/%)
         $(CXX) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -184,16 +184,16 @@ obj-test/%.o: test/%.cpp
               -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
           rm -f $(@:%.o=%.d)
 
-test_netcoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_flapx: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
         $(CXX) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ -Wl,-B$(LMODE) -lboost_unit_test_framework $(xLDFLAGS) $(LIBS)
 
 clean:
-        -rm -f netcoind test_netcoin
-        -rm -f obj/*.o
-        -rm -f obj-test/*.o
-        -rm -f obj/*.P
-        -rm -f obj-test/*.P
-        -rm -f src/build.h
+	-rm -f flapxd test_flapx
+	-rm -f obj/*.o
+	-rm -f obj-test/*.o
+	-rm -f obj/*.P
+	-rm -f obj-test/*.P
+	-rm -f src/build.h
 
 FORCE:
 

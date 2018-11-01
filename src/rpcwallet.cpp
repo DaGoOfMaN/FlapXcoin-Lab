@@ -182,7 +182,7 @@ Value getnewaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress [account]\n"
-            "Returns a new NetCoin address for receiving payments.  "
+            "Returns a new FlapX address for receiving payments.  "
             "If [account] is specified (recommended), it is added to the address book "
             "so payments received with the address will be credited to [account].");
 
@@ -250,7 +250,7 @@ Value getaccountaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress <account>\n"
-            "Returns the current NetCoin address for receiving payments to this account.");
+            "Returns the current FlapX address for receiving payments to this account.");
 
     // Parse the account first so we don't generate a key if there's an error
     string strAccount = AccountFromValue(params[0]);
@@ -266,7 +266,7 @@ Value stakeforcharity(const Array &params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "stakeforcharity <Netcoin Address> <percent> [Change Address] [min amount] [max amount]\n"
+            "stakeforcharity <FlapX Address> <percent> [Change Address] [min amount] [max amount]\n"
             "Gives a percentage of a found stake to a different address, after stake matures\n"
             "Percent is a whole number 1 to 50.\n"
 			"Change Address, Min and Max Amount are optional\n"
@@ -293,7 +293,7 @@ Value stakeforcharity(const Array &params, bool fHelp)
     if (params.size() > 2) {
         changeAddress = params[2].get_str();
         if (!changeAddress.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Netcoin change address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid FlapX change address");
     }
 
     // Optional Min Amount
@@ -367,12 +367,12 @@ Value setaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount <netcoinaddress> <account>\n"
+            "setaccount <flapxaddress> <account>\n"
             "Sets the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Netcoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid FlapX address");
 
 
     string strAccount;
@@ -397,12 +397,12 @@ Value getaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount <netcoinaddress>\n"
+            "getaccount <flapxaddress>\n"
             "Returns the account associated with the given address.");
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Netcoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid FlapX address");
 
     string strAccount;
     map<CTxDestination, string>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -437,13 +437,13 @@ Value sendtoaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "sendtoaddress <netcoinaddress> <amount> [comment] [comment-to] [tx-comment]\n"
+            "sendtoaddress <flapxaddress> <amount> [comment] [comment-to] [tx-comment]\n"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(-5, "Invalid NetCoin address");
+        throw JSONRPCError(-5, "Invalid FlapX address");
 
     // Amount
     int64_t nAmount = AmountFromValue(params[1]);
@@ -509,7 +509,7 @@ Value signmessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage <netcoinaddress> <message>\n"
+            "signmessage <flapxaddress> <message>\n"
             "Sign a message with the private key of an address");
 
     EnsureWalletIsUnlocked();
@@ -546,7 +546,7 @@ Value verifymessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage <netcoinaddress> <signature> <message>\n"
+            "verifymessage <flapxaddress> <signature> <message>\n"
             "Verify a signed message");
 
     string strAddress  = params[0].get_str();
@@ -588,14 +588,14 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress <netcoinaddress> [minconf=1]\n"
-            "Returns the total amount received by <netcoinaddress> in transactions with at least [minconf] confirmations.");
+            "getreceivedbyaddress <flapxaddress> [minconf=1]\n"
+            "Returns the total amount received by <flapxaddress> in transactions with at least [minconf] confirmations.");
 
-    // NetCoin address
+    // FlapX address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
     CScript scriptPubKey;
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Netcoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid FlapX address");
     scriptPubKey.SetDestination(address.Get());
     if (!IsMine(*pwalletMain,scriptPubKey))
         return (double)0.0;
@@ -812,14 +812,14 @@ Value sendfrom(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 7)
         throw runtime_error(
-            "sendfrom <fromaccount> <tonetcoinaddress> <amount> [minconf=1] [comment] [comment-to] [tx-comment]\n"
+            "sendfrom <fromaccount> <toflapxaddress> <amount> [minconf=1] [comment] [comment-to] [tx-comment]\n"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
     string strAccount = AccountFromValue(params[0]);
     CBitcoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid NetCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid FlapX address");
     int64_t nAmount = AmountFromValue(params[2]);
 
     int nMinDepth = 1;
@@ -832,13 +832,13 @@ Value sendfrom(const Array& params, bool fHelp)
         wtx.mapValue["comment"] = params[4].get_str();
     if (params.size() > 5 && params[5].type() != null_type && !params[5].get_str().empty())
         wtx.mapValue["to"]      = params[5].get_str();
-	std::string txcomment;
+    std::string txcomment;
     if (params.size() > 6 && params[6].type() != null_type && !params[6].get_str().empty())
-	{
+    {
         txcomment = params[6].get_str();
-		if (txcomment.length() > MAX_TX_COMMENT_LEN)
-			txcomment.resize(MAX_TX_COMMENT_LEN);
-	}
+        if (txcomment.length() > MAX_TX_COMMENT_LEN)
+            txcomment.resize(MAX_TX_COMMENT_LEN);
+    }
 
     EnsureWalletIsUnlocked();
 
@@ -887,7 +887,7 @@ Value sendmany(const Array& params, bool fHelp)
     {
         CBitcoinAddress address(s.name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid NetCoin address:")+s.name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid FlapX address:")+s.name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+s.name_);
@@ -930,7 +930,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     {
         string msg = "addmultisigaddress <nrequired> <'[\"key\",\"key\"]'> [account]\n"
             "Add a nrequired-to-sign multisignature address to the wallet\"\n"
-            "each key is a NetCoin address or hex-encoded public key\n"
+            "each key is a FlapX address or hex-encoded public key\n"
             "If [account] is specified, assign address to [account].";
         throw runtime_error(msg);
     }
@@ -947,7 +947,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     if ((int)keys.size() < nRequired)
         throw runtime_error(
             strprintf("not enough keys supplied "
-                      "(got %"PRIszu" keys, but need at least %d to redeem)", keys.size(), nRequired));
+                      "(got %" PRIszu " keys, but need at least %d to redeem)", keys.size(), nRequired));
     // std::vector<CKey> pubkeys;
     std::vector<CPubKey> pubkeys;
     pubkeys.resize(keys.size());
@@ -955,7 +955,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     {
         const std::string& ks = keys[i].get_str();
 
-        // Case 1: Netcoin address and we have full public key:
+        // Case 1: FlapX address and we have full public key:
         CBitcoinAddress address(ks);
         if (address.IsValid())
         {
@@ -1538,7 +1538,7 @@ Value keypoolrefill(const Array& params, bool fHelp)
 static void LockWallet(CWallet* pWallet)
 {
  /*   // Make this thread recognisable as the key-topping-up thread
-    RenameThread("netcoin-key-top");
+    RenameThread("flapx-key-top");
 
     pwalletMain->TopUpKeyPool();
 }
@@ -1546,7 +1546,7 @@ static void LockWallet(CWallet* pWallet)
 void ThreadCleanWalletPassphrase(void* parg)
 {
     // Make this thread recognisable as the wallet relocking thread
-    RenameThread("netcoin-lock-wa");
+    RenameThread("flapx-lock-wa");
 
     int64_t nMyWakeTime = GetTimeMillis() + *((int64_t*)parg) * 1000;
 
@@ -1730,7 +1730,7 @@ Value encryptwallet(const Array& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys.  So:
     StartShutdown();
-    return "wallet encrypted; NetCoin server stopping, restart to run with encrypted wallet";
+    return "wallet encrypted; FlapX server stopping, restart to run with encrypted wallet";
 }
 
 class DescribeAddressVisitor : public boost::static_visitor<Object>
@@ -1774,8 +1774,8 @@ Value validateaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress <netcoinaddress>\n"
-            "Return information about <netcoinaddress>.");
+            "validateaddress <flapxaddress>\n"
+            "Return information about <flapxaddress>.");
 
     CBitcoinAddress address(params[0].get_str());
     bool isValid = address.IsValid();
@@ -1803,8 +1803,8 @@ Value validatepubkey(const Array& params, bool fHelp)
 {
     if (fHelp || !params.size() || params.size() > 2)
         throw runtime_error(
-            "validatepubkey <netcoinpubkey>\n"
-            "Return information about <netcoinpubkey>.");
+            "validatepubkey <flapxpubkey>\n"
+            "Return information about <flapxpubkey>.");
 
     std::vector<unsigned char> vchPubKey = ParseHex(params[0].get_str());
     CPubKey pubKey(vchPubKey);

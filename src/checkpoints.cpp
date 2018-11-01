@@ -27,25 +27,9 @@ namespace Checkpoints
     //
 static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (     0, uint256("0x38624e3834cfdc4410a5acbc32f750171aadad9620e6ba6d5c73201c16f7c8d1"))
-        (   100, uint256("0x722978629f5714f55eab4f5e6f03bed10c6bf34d9e73f79566c3eb0b94887c42"))
-        (  1000, uint256("0xfd51dbe8a3874a2ff717af63733c19c134f921ecfe0e9bfc74cf80e9ccf97b12"))
-        ( 10000, uint256("0xd4702398032bc5b7b3c2e971de88eb6a5d91474350ccf9fdc276b606748eed40"))
-        ( 50000, uint256("0xb105dfb1ea9a486e73b502ccf71aec00ff3b6aee994dadd4f7f35e15a21c94e8"))
-        (100000, uint256("0x10e02fc59b6e9d3010f0a91da8890fc6bacb59cebb38bdaad8b7f84df68fa617"))
-        (136700, uint256("0x56635b3326e9a29f5ad82884eb3cfb7412a7c0daf671174daea834a0a4e80cb6"))
-        (175000, uint256("0x1ea14545346fa619ff26000f50eb53f76bfb4861066ef8753c584e752db5b59f"))
-        (200000, uint256("0xfc6fbe48af986b7c5e560ecbf82b78ea73f568482dd806e29e7d1027a1905fd4"))
-        (300000, uint256("0x1b8d437a34b38b96b8aace5b764fa423d960e6640d11c184dc8215c7596024c8"))
-        (400000, uint256("0x5ed5ac1fd6e9ea28e33422141eda939df9b6a3a65c16f56655d6e461039ae56e"))
-        (442000, uint256("0xf5eea0a0842db79acd3f434fbf4cb772e13d451aabf4c61f2179faca5ffb8c08"))
-        (462000, uint256("0xc0b99dda79dbd220c7845d40636c786d2d5224ab85a86eb7250cb7a7bd7a1c58"))
-        (482000, uint256("0x945c1cd0b410cfe51dd04bece6d522bdd94e42f96a2d5861303057724585e9e0"))
-        (500000, uint256("0x3ea4bd2c8769e223e33d0842eeb137801d2cbd2d6aa2f412da3116cd1860e098"))
-        (522000, uint256("0x889b767099c273d009102c9943b82600a8d052ee791090918b17d400ae1b93de"))
-        (530002, uint256("0x7e5982788dae8607994904a59728eff2d69966fa5438e8788ddb1ff931bb4b0a"))
-        (1291000, uint256("0x182aa72911c7910b32d1708be94d115d66bb70b4d1f091c7b31f172be8d02802"))
-        (1832000, uint256("0x17f2e2c1890578a3d882aeb7d422aa1f154bb1c3a11a7f2ee6ea735004e77d10"))
+        ( 0, Params().HashGenesisBlock() )
+        ( 5, uint256("0xf87e49aa55da512d4d52d9845548095d79455da0f8ce04333239fa93a411fbaf"))
+        ( 100000, uint256("0xbfbe09c7103b672ce64e99b8b02b1eb1a5d7d39ce211331bb9ad3ae6f7d381ed"))
         ;
 
     // TestNet has no checkpoints
@@ -368,7 +352,7 @@ static MapCheckpoints mapCheckpoints =
     }
 }
 
-// netcoin: sync-checkpoint master key
+// flapx: sync-checkpoint master key
 const std::string CSyncCheckpoint::strMasterPubKey = "046b2e58c8c0502bea592b7ec55f5acb8781a2764520f346642a5c2a6e8ef8b00704752e825d9e739daac343fae5027945e018a15e456e98ef2d0b507fbd9a6d13";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";

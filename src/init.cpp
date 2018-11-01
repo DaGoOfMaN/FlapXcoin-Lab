@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 NetCoin Developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +15,6 @@
 #include "walletdb.h"
 #include "bitcoinrpc.h"
 #include "net.h"
-// #include "init.h"
 #include "util.h"
 #include "ui_interface.h"
 #include "checkpoints.h"
@@ -39,7 +39,6 @@ CWallet* pwalletMain;
 CClientUIInterface uiInterface;
 std::string strWalletFileName;
 bool fConfChange;
-// bool fEnforceCanonical;
 unsigned int nNodeLifespan;
 unsigned int nDerivationMethodIndex;
 unsigned int nMinerSleep;
@@ -50,15 +49,6 @@ enum Checkpoints::CPMode CheckpointsMode;
 //
 // Shutdown
 //
-/*
-void ExitTimeout(void* parg)
-{
-#ifdef WIN32
-    MilliSleep(5000);
-    ExitProcess(0);
-#endif
-}
-*/
 //
 // Thread management and startup/shutdown:
 //
@@ -88,15 +78,6 @@ volatile bool fRequestShutdown = false;
 
 void StartShutdown()
 {
-/*
-#ifdef QT_GUI
-    // ensure we leave the Qt main loop for a clean GUI exit (Shutdown() is called in bitcoin.cpp afterwards)
-    uiInterface.QueueShutdown();
-#else
-    // Without UI, Shutdown() can simply be started in a new thread
-    NewThread(Shutdown, NULL);
-#endif
-  */
     fRequestShutdown = true;
 }
 
@@ -108,24 +89,11 @@ bool ShutdownRequested()
 void Shutdown()
 {
     static CCriticalSection cs_Shutdown;
-    // static bool fTaken;
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
     // Make this thread recognisable as the shutdown thread
-    RenameThread("netcoin-shutoff");
+    RenameThread("flapx-shutoff");
 
- /*   bool fFirstThread = false;
-    {
-        TRY_LOCK(cs_Shutdown, lockShutdown);
-        if (lockShutdown)
-        {
-            fFirstThread = !fTaken;
-            fTaken = true;
-        }
-    }
-    static bool fExit;
-    if (fFirstThread)
- */
     nTransactionsUpdated++;
     StopRPCThreads();
     ShutdownRPCMining();
@@ -136,33 +104,7 @@ void Shutdown()
         if (pwalletMain)
             pwalletMain->SetBestChain(CBlockLocator(pindexBest));
     }
- /*   {
-        fShutdown = true;
-        nTransactionsUpdated++;
-        StopRPCThreads();
-        bitdb.Flush(false);
-        StopNode();
-        bitdb.Flush(true);
-        boost::filesystem::remove(GetPidFile());
-        UnregisterWallet(pwalletMain);
-        delete pwalletMain;
-        NewThread(ExitTimeout, NULL);
-        MilliSleep(50);
-        printf("Netcoin exited\n\n");
-        // fExit = true;
-#ifndef QT_GUI
-        // ensure non-UI client gets exited here, but let Bitcoin-Qt reach 'return 0;' in bitcoin.cpp
-        exit(0);
-#endif
-    }
- /*   else
-    {
-        while (!fExit)
-            MilliSleep(500);
-        MilliSleep(100);
-        ExitThread(0);
-    }
- */
+
     bitdb.Flush(true);
     boost::filesystem::remove(GetPidFile());
     UnregisterWallet(pwalletMain);
@@ -173,19 +115,12 @@ void Shutdown()
 // Signal handlers are very limited in what they are allowed to do, so:
 void DetectShutdownThread(boost::thread_group* threadGroup)
 {
-    // bool shutdown = ShutdownRequested();
-    // while (fRequestShutdown == false)
-    // Tell the main threads to shutdown.
     while (!fRequestShutdown)
-    //while (!shutdown)
     {
         MilliSleep(200);
          if (fRequestShutdown)
             threadGroup->interrupt_all();
-        // shutdown = ShutdownRequested();
     }
-    // if (threadGroup)
-    //    threadGroup->interrupt_all();
 }
 
 
@@ -230,13 +165,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to netcoind / RPC client
-            std::string strUsage = _("NetCoin version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to flapxd / RPC client
+            std::string strUsage = _("FlapX version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  netcoind [options]                     " + "\n" +
-                  "  netcoind [options] <command> [params]  " + _("Send command to -server or netcoind") + "\n" +
-                  "  netcoind [options] help                " + _("List commands") + "\n" +
-                  "  netcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  flapxd [options]                     " + "\n" +
+                  "  flapxd [options] <command> [params]  " + _("Send command to -server or flapxd") + "\n" +
+                  "  flapxd [options] help                " + _("List commands") + "\n" +
+                  "  flapxd [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -246,7 +181,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "netcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "flapx:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -299,14 +234,11 @@ bool AppInit(int argc, char* argv[])
 
     if (detectShutdownThread)
     {
-        // Shutdown(NULL);
-        // threadGroup.interrupt_all();
-        // threadGroup.join_all();
         detectShutdownThread->join();
         delete detectShutdownThread;
         detectShutdownThread = NULL;
     }
-        Shutdown();
+    Shutdown();
 
     return fRet;
 }
@@ -316,7 +248,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect netcoind signal handlers
+    // Connect flapxd signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -324,7 +256,6 @@ int main(int argc, char* argv[])
     if (fRet && fDaemon)
         return 0;
 
-    // return 1;
     return (fRet ? 0 : 1);
 }
 #endif
@@ -332,13 +263,13 @@ int main(int argc, char* argv[])
 
 bool static InitError(const std::string &str)
 {
-    uiInterface.ThreadSafeMessageBox(str, _("NetCoin"), CClientUIInterface::OK | CClientUIInterface::MODAL);
+    uiInterface.ThreadSafeMessageBox(str, _("FlapX"), CClientUIInterface::OK | CClientUIInterface::MODAL);
     return false;
 }
 
 bool static InitWarning(const std::string &str)
 {
-    uiInterface.ThreadSafeMessageBox(str, _("NetCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+    uiInterface.ThreadSafeMessageBox(str, _("FlapX"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
     return true;
 }
 
@@ -360,8 +291,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: netcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: netcoind.pid)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: flapx.conf)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: flapxd.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
@@ -454,7 +385,7 @@ std::string HelpMessage()
     return strUsage;
 }
 
-/** Initialize netcoin.
+/** Initialize flapx.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup)
@@ -509,8 +440,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     sigaction(SIGHUP, &sa_hup, NULL);
 #endif
 
-    // threadGroup.create_thread(boost::bind(&DetectShutdownThread, &threadGroup));
-
     // ********************************************************* Step 2: parameter interactions
 
     nNodeLifespan = GetArg("-addrlifespan", 7);
@@ -530,19 +459,11 @@ bool AppInit2(boost::thread_group& threadGroup)
     if(strCpMode == "permissive")
         CheckpointsMode = Checkpoints::PERMISSIVE;
 
-    nDerivationMethodIndex = 0; // use 0 for compatibility with original netcoin wallet keys
-
-    // fTestNet = GetBoolArg("-testnet");
+    nDerivationMethodIndex = 0; // use 0 for compatibility with original flapx wallet keys
 
     if (!SelectParamsFromCommandLine()) {
          return InitError("Invalid combination of -testnet and -regtest.");
     }
-
-    // NetCoin: Keep irc seeding on by default for now.
-//    if (fTestNet)
-//    {
-//        SoftSetBoolArg("-irc", true);
-//    }
 
     if (mapArgs.count("-bind")) {
         // when specifying an explicit binding address, you want to listen on it
@@ -561,7 +482,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         SoftSetBoolArg("-listen", false);
 
         // to protect privacy, do not discover addresses by default
-        if (SoftSetBoolArg("-discover", false));
+        SoftSetBoolArg("-discover", false);
     }
 
     if (!GetBoolArg("-listen", true)) {
@@ -590,14 +511,14 @@ bool AppInit2(boost::thread_group& threadGroup)
     else
         fDebugNet = GetBoolArg("-debugnet");
 
-   //  bitdb.SetDetach(GetBoolArg("-detachdb", false));
- /*
+#if 0
 #if !defined(WIN32) && !defined(QT_GUI)
     fDaemon = GetBoolArg("-daemon");
 #else
     fDaemon = false;
 #endif
-*/
+#endif
+
     if (fDaemon)
         fServer = true;
     else
@@ -634,7 +555,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     }
 
     fConfChange = GetBoolArg("-confchange", false);
-    // fEnforceCanonical = GetBoolArg("-enforcecanonical", true);
 
     if (mapArgs.count("-mininput"))
     {
@@ -651,14 +571,15 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (strWalletFileName != boost::filesystem::basename(strWalletFileName) + boost::filesystem::extension(strWalletFileName))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s."), strWalletFileName.c_str(), strDataDir.c_str()));
 
-    // Make sure only a single NetCoin process is using the data directory.
+    // Make sure only a single FlapX process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  NetCoin is probably already running."), GetDataDir().string().c_str()));
-/*
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  FlapX is probably already running."), GetDataDir().string().c_str()));
+
+#if 0
 #if !defined(WIN32) && !defined(QT_GUI)
     if (fDaemon)
     {
@@ -680,11 +601,12 @@ bool AppInit2(boost::thread_group& threadGroup)
             fprintf(stderr, "Error: setsid() returned %d errno %d\n", sid, errno);
     }
 #endif
-*/
+#endif
+
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("NetCoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("FlapX version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
     printf("Startup time: %s\n", DateTimeStrFormat("%x %H:%M:%S", GetTime()).c_str());
@@ -693,7 +615,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "NetCoin server starting\n");
+        fprintf(stdout, "FlapX server starting\n");
 
     int64_t nStart;
 
@@ -703,15 +625,9 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     if (!bitdb.Open(GetDataDir()))
     {
-        /*  string msg = strprintf(_("Error initializing database environment %s!"
-                                 " To recover, BACKUP THAT DIRECTORY, then remove"
-                                 " everything from it except for wallet.dat."), strDataDir.c_str());
-        return InitError(msg);
-      */
-
         // try moving the database env out of the way
         boost::filesystem::path pathDatabase = GetDataDir() / "database";
-        boost::filesystem::path pathDatabaseBak = GetDataDir() / strprintf("database.%d.bak", GetTime());
+        boost::filesystem::path pathDatabaseBak = GetDataDir() / strprintf("database.%" PRId64 ".bak", GetTime());
         try {
             boost::filesystem::rename(pathDatabase, pathDatabaseBak);
             printf("Moved old %s to %s. Retrying.\n", pathDatabase.string().c_str(), pathDatabaseBak.string().c_str());
@@ -744,7 +660,7 @@ bool AppInit2(boost::thread_group& threadGroup)
                                      " Original wallet.dat saved as wallet.{timestamp}.bak in %s; if"
                                      " your balance or transactions are incorrect you should"
                                      " restore from a backup."), strDataDir.c_str());
-            uiInterface.ThreadSafeMessageBox(msg, _("Netcoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+            uiInterface.ThreadSafeMessageBox(msg, _("FlapX"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         }
         if (r == CDBEnv::RECOVER_FAIL)
             return InitError(_("wallet.dat corrupt, salvage failed"));
@@ -773,14 +689,6 @@ bool AppInit2(boost::thread_group& threadGroup)
                 SetLimited(net);
         }
     }
- /*
-#if defined(USE_IPV6)
-#if ! USE_IPV6
-    else
-        SetLimited(NET_IPV6);
-#endif
-#endif
- */
 
     CService addrProxy;
     bool fProxy = false;
@@ -792,10 +700,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         if (!IsLimited(NET_IPV4))
             SetProxy(NET_IPV4, addrProxy, nSocksVersion);
         if (nSocksVersion > 4) {
-// #ifdef USE_IPV6
             if (!IsLimited(NET_IPV6))
                 SetProxy(NET_IPV6, addrProxy, nSocksVersion);
-// #endif
             SetNameProxy(addrProxy, nSocksVersion);
         }
         fProxy = true;
@@ -818,9 +724,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     fNoListen = !GetBoolArg("-listen", true);
     fDiscover = GetBoolArg("-discover", true);
     fNameLookup = GetBoolArg("-dns", true);
-// #ifdef USE_UPNP
-//    fUseUPnP = GetBoolArg("-upnp", USE_UPNP);
-// #endif
 
     bool fBound = false;
     if (!fNoListen)
@@ -836,10 +739,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         } else {
             struct in_addr inaddr_any;
             inaddr_any.s_addr = INADDR_ANY;
-// #ifdef USE_IPV6
             if (!IsLimited(NET_IPV6))
                 fBound |= Bind(CService(in6addr_any, GetListenPort()), false);
-// #endif
             if (!IsLimited(NET_IPV4))
                 fBound |= Bind(CService(inaddr_any, GetListenPort()), !fBound);
         }
@@ -901,14 +802,14 @@ bool AppInit2(boost::thread_group& threadGroup)
 
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill netcoin-qt during the last operation. If so, exit.
+    // requested to kill flapx-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {
         printf("Shutdown requested. Exiting.\n");
         return false;
     }
-    printf(" block index %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" block index %15" PRId64 "ms\n", GetTimeMillis() - nStart);
 
     if (GetBoolArg("-printblockindex") || GetBoolArg("-printblocktree"))
     {
@@ -939,16 +840,6 @@ bool AppInit2(boost::thread_group& threadGroup)
         return false;
     }
 
-    // ********************************************************* Testing Zerocoin
-
-/*
-    if (GetBoolArg("-zerotest", false))
-    {
-        printf("\n=== ZeroCoin tests start ===\n");
-        Test_RunAllTests();
-        printf("=== ZeroCoin tests end ===\n\n");
-    }
-*/
     // ********************************************************* Step 8: load wallet
 
     uiInterface.InitMessage(_("Loading wallet..."));
@@ -965,13 +856,13 @@ bool AppInit2(boost::thread_group& threadGroup)
         {
             string msg(_("Warning: error reading wallet.dat! All keys read correctly, but transaction data"
                          " or address book entries might be missing or incorrect."));
-            uiInterface.ThreadSafeMessageBox(msg, _("Netcoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+            uiInterface.ThreadSafeMessageBox(msg, _("FlapX"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         }
         else if (nLoadWalletRet == DB_TOO_NEW)
-            strErrors << _("Error loading wallet.dat: Wallet requires newer version of NetCoin") << "\n";
+            strErrors << _("Error loading wallet.dat: Wallet requires newer version of FlapX") << "\n";
         else if (nLoadWalletRet == DB_NEED_REWRITE)
         {
-            strErrors << _("Wallet needed to be rewritten: restart NetCoin to complete") << "\n";
+            strErrors << _("Wallet needed to be rewritten: restart FlapX to complete") << "\n";
             printf("%s", strErrors.str().c_str());
             return InitError(strErrors.str());
         }
@@ -1010,7 +901,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     }
 
     printf("%s", strErrors.str().c_str());
-    printf(" wallet      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+    printf(" wallet      %15" PRId64 "ms\n", GetTimeMillis() - nStart);
 
     RegisterWallet(pwalletMain);
 
@@ -1032,7 +923,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
         nStart = GetTimeMillis();
         pwalletMain->ScanForWalletTransactions(pindexRescan, true);
-        printf(" rescan      %15"PRI64d"ms\n", GetTimeMillis() - nStart);
+        printf(" rescan      %15" PRId64 "ms\n", GetTimeMillis() - nStart);
         pwalletMain->SetBestChain(CBlockLocator(pindexBest));
         nWalletDBUpdated++;
     }
@@ -1064,7 +955,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         }
     }
 
-    // Netcoin: import PoW blockchain
+    // FlapX: import PoW blockchain
     filesystem::path pathOldblockchain = GetDataDir() / "blocks";
     if (filesystem::exists(pathOldblockchain)) {
         uiInterface.InitMessage(_("Importing blockchain from PoW wallet..."));
@@ -1100,7 +991,7 @@ bool AppInit2(boost::thread_group& threadGroup)
             printf("Invalid or missing peers.dat; recreating\n");
     }
 
-    printf("Loaded %i addresses from peers.dat  %"PRI64d"ms\n",
+    printf("Loaded %i addresses from peers.dat  %" PRId64 "ms\n",
            addrman.size(), GetTimeMillis() - nStart);
 
     // ********************************************************* Step 11: start node
@@ -1114,22 +1005,18 @@ bool AppInit2(boost::thread_group& threadGroup)
     RandAddSeedPerfmon();
 
     //// debug print
-    printf("mapBlockIndex.size() = %"PRIszu"\n",   mapBlockIndex.size());
+    printf("mapBlockIndex.size() = %" PRIszu "\n",   mapBlockIndex.size());
     printf("nBestHeight = %d\n",            nBestHeight);
-    printf("setKeyPool.size() = %"PRIszu"\n",      pwalletMain->setKeyPool.size());
-    printf("mapWallet.size() = %"PRIszu"\n",       pwalletMain->mapWallet.size());
-    printf("mapAddressBook.size() = %"PRIszu"\n",  pwalletMain->mapAddressBook.size());
+    printf("setKeyPool.size() = %" PRIszu "\n",      pwalletMain->setKeyPool.size());
+    printf("mapWallet.size() = %" PRIszu "\n",       pwalletMain->mapWallet.size());
+    printf("mapAddressBook.size() = %" PRIszu "\n",  pwalletMain->mapAddressBook.size());
 
-    // if (!NewThread(StartNode, NULL))
-    // if (!NewThread(StartNode, (void*)&threadGroup))
-    //    InitError(_("Error: could not start node"));
     StartNode(threadGroup);
 
     // InitRPCMining is needed here so getwork/getblocktemplate in the GUI debug console works properly.
     InitRPCMining();
 
     if (fServer)
-        // NewThread(ThreadRPCServer, NULL);
         StartRPCThreads();
 
     // Mine proof-of-stake blocks in the background
@@ -1143,19 +1030,9 @@ bool AppInit2(boost::thread_group& threadGroup)
     uiInterface.InitMessage(_("Done loading"));
     printf("Done loading\n");
 
-    // if (!strErrors.str().empty())
-     //   return InitError(strErrors.str());
-
-     // Add wallet transactions that aren't already in a block to mapTransactions
+    // Add wallet transactions that aren't already in a block to mapTransactions
     pwalletMain->ReacceptWalletTransactions();
-/*
-#if !defined(QT_GUI)
-    // Loop until process is exit()ed from shutdown() function,
-    // called from ThreadRPCServer thread when a "stop" command is received.
-    while (1)
-        MilliSleep(5000);
-#endif
-*/
+
     // Run a thread to flush wallet periodically
     threadGroup.create_thread(boost::bind(&ThreadFlushWalletDB, boost::ref(pwalletMain->strWalletFile)));
 

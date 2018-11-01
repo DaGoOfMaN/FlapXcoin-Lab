@@ -110,7 +110,7 @@ public:
     bool WriteKey(const CPubKey& vchPubKey, const CPrivKey& vchPrivKey, const CKeyMetadata &keyMeta)
     {
         nWalletDBUpdated++;
-        // Added in NetcoinPOS
+        // Added in FlapXPOS
         if(!Write(std::make_pair(std::string("keymeta"), vchPubKey), keyMeta))
             return false;
 
@@ -129,7 +129,7 @@ public:
     {
         nWalletDBUpdated++;
         bool fEraseUnencryptedKey = true;
-        // added in NetCoinPos
+        // added in FlapXPOS
         if(!Write(std::make_pair(std::string("keymeta"), vchPubKey), keyMeta))
             return false;
 

@@ -3,6 +3,7 @@
 // Copyright (c) 2011-2012 Litecoin Developers
 // Copyright (c) 2013 Luckycoin Developers
 // Copyright (c) 2013 NetCoin Developers
+// Copyright (c) 2018 FlapX Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -371,7 +372,7 @@ string FormatMoney(int64_t n, bool fPlus)
     int64_t n_abs = (n > 0 ? n : -n);
     int64_t quotient = n_abs/COIN;
     int64_t remainder = n_abs%COIN;
-    string str = strprintf("%"PRI64d".%08"PRI64d, quotient, remainder);
+    string str = strprintf("%" PRId64 ".%08" PRId64, quotient, remainder);
 
     // Right-trim excess 0's before the decimal point:
     int nTrim = 0;
@@ -976,7 +977,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "netcoin";
+    const char* pszModule = "flapx";
 #endif
     if (pex)
         return strprintf(
@@ -1012,13 +1013,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\NetCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\NetCoin
-    // Mac: ~/Library/Application Support/NetCoin
-    // Unix: ~/.netcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\FlapX
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\FlapX
+    // Mac: ~/Library/Application Support/FlapX
+    // Unix: ~/.flapx
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "NetCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "FlapX";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1030,10 +1031,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "NetCoin";
+    return pathRet / "FlapX";
 #else
     // Unix
-    return pathRet / ".netcoin";
+    return pathRet / ".flapx";
 #endif
 #endif
 }
@@ -1078,7 +1079,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "netcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "flapx.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1115,14 +1116,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     // if (!streamConfig.good())
-    //    return; // No NetCoin.conf file is OK
+    //    return; // No FlapX.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override netcoin.conf
+        // Don't overwrite existing settings so command line settings override flapx.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1136,7 +1137,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "netcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "flapxd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1257,13 +1258,13 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
 
     // Add data
     vTimeOffsets.input(nOffsetSample);
-    printf("Added time data, samples %d, offset %+"PRI64d" (%+"PRI64d" minutes)\n", vTimeOffsets.size(), nOffsetSample, nOffsetSample/60);
+    printf("Added time data, samples %d, offset %+" PRId64 " (%+" PRId64 " minutes)\n", vTimeOffsets.size(), nOffsetSample, nOffsetSample/60);
     if (vTimeOffsets.size() >= 5 && vTimeOffsets.size() % 2 == 1)
     {
         int64_t nMedian = vTimeOffsets.median();
         std::vector<int64_t> vSorted = vTimeOffsets.sorted();
         // Only let other nodes change our time by so much
-        if (abs64(nMedian) < 35 * 60) // NetCoin: changed maximum adjust to 35 mins to avoid letting peers change our time too much in case of an attack.
+        if (abs64(nMedian) < 35 * 60) // FlapX: changed maximum adjust to 35 mins to avoid letting peers change our time too much in case of an attack.
         {
             nTimeOffset = nMedian;
         }
@@ -1286,16 +1287,16 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                     string strMessage = _("Warning: Please check that your computer's date and time are correct.  If your clock is wrong Linkcoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("NetCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("FlapX"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }
         if (fDebug) {
             BOOST_FOREACH(int64_t n, vSorted)
-                printf("%+"PRI64d"  ", n);
+                printf("%+" PRId64 "  ", n);
             printf("|  ");
         }
-        printf("nTimeOffset = %+"PRI64d"  (%+"PRI64d" minutes)\n", nTimeOffset, nTimeOffset/60);
+        printf("nTimeOffset = %+" PRId64 "  (%+" PRId64 " minutes)\n", nTimeOffset, nTimeOffset/60);
     }
 }
 
@@ -1333,14 +1334,14 @@ static const long hextable[] =
 
 long hex2long(const char* hexString)
 {
-	long ret = 0; 
+    long ret = 0; 
 
-	while (*hexString && ret >= 0) 
-	{
-		ret = (ret << 4) | hextable[*hexString++];
-	}
+    while (*hexString && ret >= 0) 
+    {
+        ret = (ret << 4) | hextable[(int)*hexString++];
+    }
 
-	return ret; 
+    return ret; 
 }
 
 uint32_t insecure_rand_Rz = 11;

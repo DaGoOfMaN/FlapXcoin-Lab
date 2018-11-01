@@ -24,11 +24,6 @@
 #include <windows.h>
 #else
 #include <sys/mman.h>
-// #include <limits.h>
-/* This comes from limits.h if it's not defined there set a sane default */
-// #ifndef PAGESIZE
-// #include <unistd.h>
-// #define PAGESIZE sysconf(_SC_PAGESIZE)
 #include <limits.h> // for PAGESIZE
 #include <unistd.h> // for sysconf
 #endif
