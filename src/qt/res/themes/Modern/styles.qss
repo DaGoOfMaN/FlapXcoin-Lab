@@ -1,7 +1,8 @@
 /**
- * Girly Heart Qt Theme - v1.0
- * Created: 22/2/2015
- * Author: tepelstreeltje (Based on HyperBlue by Zeewolf) 
+ * Modern Qt Theme - v1.0
+ * Created: 2018
+ * Templet: tepelstreeltje (Based on HyperBlue by Zeewolf) 
+ * Author: NerdLabs001
  */
 
 /**
@@ -36,7 +37,7 @@
 
 /* Window */
  QMainWindow {
-	border-image: url($themes-dir/girly heart/heart.png);
+	border-image: url($themes-dir/Modern/background.png);
 }
 
 /* Dialog */
@@ -69,6 +70,12 @@ QStatusBar {
 
 QStatusBar::item {
 	border: none;
+}	
+	
+/* Theme center */
+#label_5 {
+	border-image: url($themes-dir/Modern/center.png);
+
 }
 
 /* Label */
