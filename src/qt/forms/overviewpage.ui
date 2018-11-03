@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>765</width>
-    <height>549</height>
+    <width>768</width>
+    <height>599</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -97,7 +97,7 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>0</width>
+             <width>300</width>
              <height>0</height>
             </size>
            </property>
@@ -220,8 +220,14 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
+             <width>125</width>
              <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="acceptDrops">
@@ -244,7 +250,7 @@
              <widget class="QLabel" name="label_5">
               <property name="minimumSize">
                <size>
-                <width>100</width>
+                <width>150</width>
                 <height>250</height>
                </size>
               </property>
@@ -269,6 +275,19 @@
               </property>
              </spacer>
             </item>
+            <item row="1" column="1">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </widget>
          </item>
@@ -282,7 +301,7 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>0</width>
+             <width>300</width>
              <height>0</height>
             </size>
            </property>

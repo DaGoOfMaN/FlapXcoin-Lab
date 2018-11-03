@@ -184,8 +184,32 @@ QScrollArea {
 
 #scrollAreaWidgetContents > QFrame:only-one {
 	border-bottom: none;
+/* Progress bar */
+QProgressBar {
+	border: 1px solid rgba(136,193,208,80);
+	color: $brightest-color;
+	font-weight: bold;
+	background-color: transparent;
 }
 
+QProgressBar::chunk {
+	background-color: rgba(255,170,0,200);
+	width: 3px;
+	margin: 0.5px;
+}
+/* Progress bar */
+QProgressBar {
+	border: 1px solid rgba(136,193,208,80);
+	color: $brightest-color;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+QProgressBar::chunk {
+	background-color: rgba(255,170,0,200);
+	width: 3px;
+	margin: 0.5px;
+}
 /* Text edit fields */
 QPlainTextEdit, QLineEdit {
 	padding: 4px;
