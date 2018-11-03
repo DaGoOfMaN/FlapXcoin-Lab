@@ -25,7 +25,7 @@
 	$shade-transparent-2 = rgba(0,0,0,50)
 	$main-color = #25383C
 	$text-grey-d = #0c191d
-	$accent-color = #FFB2FF
+	$accent-color = #f20fdd
 	$brightest-color = #fff
 	$input-border-color = #0c191d
 	$header-font = "Verdana, Geneva, sans-serif"
@@ -36,7 +36,7 @@
 * { gridline-color: $main-color }
 
 /* Window */
- QMainWindow {
+QFrame#frame42  {
 	border-image: url($themes-dir/Modern/background.png);
 }
 
