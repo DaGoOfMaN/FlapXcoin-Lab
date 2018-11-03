@@ -70,7 +70,7 @@ QFrame {
 }
 
 /* Coin Image */
-#label_2 {
+#label_5 {
 	qproperty-pixmap: url($themes-dir/Luminous/PayCon256.png);
 }
 
