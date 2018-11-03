@@ -39,7 +39,10 @@
 QFrame#frame42  {
 	border-image: url($themes-dir/Modern/background.png);
 }
-
+/* Window */
+QMainWindow {
+	border-image: url($themes-dir/Modern/background.png);
+}
 /* Dialog */
 QDialog, QTableView{
 	border-image: url($themes-dir/world/black.png);
