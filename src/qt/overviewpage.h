@@ -61,10 +61,7 @@ public:
 public slots:
     void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
     void setNumTransactions(int count);
-    void setStatistics(ClientModel *modelStatistics);
     void lockWalletToggle();
-    void updateStatistics();
-    void updatePrevious(int, int, int, double, double, double, double, QString, int, int);
 
 signals:
     void transactionClicked(const QModelIndex &index);
@@ -82,10 +79,6 @@ private:
     qint64 currentImmatureBalance;
     QMenu *contextMenu;
 
-    //Weight label
-    qint64 currentWeight;
-    qint64 currentNetworkWeight;
-    qint64 currentMyWeight;
 
     TxViewDelegate *txdelegate;
     TransactionFilterProxy *filter;
@@ -94,7 +87,6 @@ private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
     void updateAlerts(const QString &warnings);
-    void updateMyWeight();
     void on_startButton_clicked();
 
 signals:

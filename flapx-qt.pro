@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = flapx-qt
+TARGET = flapx
 CONFIG += qt
 QT += gui
 VERSION = 2.5.2
