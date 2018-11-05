@@ -36,9 +36,6 @@ extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
 
 
-
-#include "networkpage.moc"
-
 NetworkPage::NetworkPage(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::NetworkPage),

@@ -84,8 +84,8 @@ private:
     TransactionFilterProxy *filter;
 
 private slots:
-    void updateDisplayUnit();
-    void updateAlerts(const QString &warnings);
+    //void updateDisplayUnit();
+    //void updateAlerts(const QString &warnings);
     void updateMyWeight();
 
 signals:
