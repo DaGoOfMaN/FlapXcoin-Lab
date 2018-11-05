@@ -225,7 +225,7 @@ std::string getOutputs(std::string txid)
         str.append(lol7);
         str.append(": ");
         str.append(amount);
-        str.append(" NET");
+        str.append(" FLAPX");
         str.append("\n");
     }
 
@@ -269,7 +269,7 @@ std::string getInputs(std::string txid)
         str.append(lol6);
         str.append(": ");
         str.append(amount);
-        str.append(" NET");
+        str.append(" FLAPX");
         str.append("\n");
     }
 
@@ -419,11 +419,11 @@ void ShoppingPage::updateExplorer(bool block)
         QString QOutputs = QString::fromUtf8(outputs.c_str());
         QString QInputs = QString::fromUtf8(inputs.c_str());
         QString QFees = QString::number(fees, 'f', 6);
-        ui->valueBox_2->setText(QValue + " NET");
+        ui->valueBox_2->setText(QValue + " FLAPX");
         ui->txID_2->setText(QID);
         ui->outputBox_2->setText(QOutputs);
         ui->inputBox_2->setText(QInputs);
-        ui->feesBox_2->setText(QFees + " NET");
+        ui->feesBox_2->setText(QFees + " FLAPX");
     }
 }
 
@@ -446,13 +446,13 @@ void ShoppingPage::setModel(ClientModel *model)
 //Exchange Links
 void ShoppingPage::on_pushButton_36_clicked()
 {
-    QString link="https://novaexchange.com/market/BTC_NET/";
+    QString link="https://novaexchange.com/market/BTC_FLAPX/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
 void ShoppingPage::on_pushButton_37_clicked()
 {
-    QString link="https://www.cryptopia.co.nz/Exchange/?market=NET_BTC";
+    QString link="https://www.cryptopia.co.nz/Exchange/?market=FLAPX_BTC";
     QDesktopServices::openUrl(QUrl(link));
 }
 

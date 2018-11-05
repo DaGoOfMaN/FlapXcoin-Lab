@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Netcoin</source>
-        <translation>Sobre Netcoin</translation>
+        <source>About FlapXcoin</source>
+        <translation>Sobre FlapXcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Netcoin&lt;/b&gt; version</source>
-        <translation>versió &lt;b&gt;Netcoin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;FlapXcoin&lt;/b&gt; version</source>
+        <translation>versió &lt;b&gt;FlapXcoin&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Netcoin developers</source>
+Copyright © 2014 The FlapXcoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Netcoin developers</translation>
+Copyright © 2014 The FlapXcoin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your Netcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Aquestes són les teves adreces de Netcoin per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
+        <source>These are your FlapXcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Aquestes són les teves adreces de FlapXcoin per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Netcoin address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça Netcoin</translation>
+        <source>Sign a message to prove you own a FlapXcoin address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça FlapXcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified Netcoin address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça Netcoin especificada.</translation>
+        <source>Verify a message to ensure it was signed with a specified FlapXcoin address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça FlapXcoin especificada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>Netcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Netcoin tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació de la seva cartera no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
+        <source>FlapXcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>FlapXcoin tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació de la seva cartera no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -372,8 +372,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Show information about Netcoin</source>
-        <translation>Mostra informació sobre Netcoin</translation>
+        <source>Show information about FlapXcoin</source>
+        <translation>Mostra informació sobre FlapXcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -422,13 +422,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-64"/>
-        <source>Send coins to a Netcoin address</source>
-        <translation>Enviar monedes a una adreça Netcoin</translation>
+        <source>Send coins to a FlapXcoin address</source>
+        <translation>Enviar monedes a una adreça FlapXcoin</translation>
     </message>
     <message>
         <location line="+47"/>
-        <source>Modify configuration options for Netcoin</source>
-        <translation>Modificar les opcions de configuració per a Netcoin</translation>
+        <source>Modify configuration options for FlapXcoin</source>
+        <translation>Modificar les opcions de configuració per a FlapXcoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -467,8 +467,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-202"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -477,8 +477,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+180"/>
-        <source>&amp;About Netcoin</source>
-        <translation>&amp;Sobre Netcoin</translation>
+        <source>&amp;About FlapXcoin</source>
+        <translation>&amp;Sobre FlapXcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -534,13 +534,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>Netcoin client</source>
-        <translation>Client Netcoin</translation>
+        <source>FlapXcoin client</source>
+        <translation>Client FlapXcoin</translation>
     </message>
     <message numerus="yes">
         <location line="+75"/>
-        <source>%n active connection(s) to Netcoin network</source>
-        <translation><numerusform>%n conexió activa a la xarxa Netcoin</numerusform><numerusform>%n conexions actives a la xarxa Netcoin</numerusform></translation>
+        <source>%n active connection(s) to FlapXcoin network</source>
+        <translation><numerusform>%n conexió activa a la xarxa FlapXcoin</numerusform><numerusform>%n conexions actives a la xarxa FlapXcoin</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -579,13 +579,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-312"/>
-        <source>About Netcoin card</source>
-        <translation>Sobre la tarjeta Netcoin</translation>
+        <source>About FlapXcoin card</source>
+        <translation>Sobre la tarjeta FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Netcoin card</source>
-        <translation>Mostra informació sobre la tarjeta Netcoin</translation>
+        <source>Show information about FlapXcoin card</source>
+        <translation>Mostra informació sobre la tarjeta FlapXcoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -660,8 +660,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Netcoin address or malformed URI parameters.</source>
-        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Netcoin no vàlida o paràmetres URI malformats.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid FlapXcoin address or malformed URI parameters.</source>
+        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça FlapXcoin no vàlida o paràmetres URI malformats.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -720,8 +720,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. Netcoin can no longer continue safely and will quit.</source>
-        <translation>S&apos;ha produït un error fatal. Netcoin ja no pot continuar de forma segura i es tancarà.</translation>
+        <source>A fatal error occurred. FlapXcoin can no longer continue safely and will quit.</source>
+        <translation>S&apos;ha produït un error fatal. FlapXcoin ja no pot continuar de forma segura i es tancarà.</translation>
     </message>
 </context>
 <context>
@@ -1054,8 +1054,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Netcoin address.</source>
-        <translation>La direcció introduïda &quot;%1&quot; no és una adreça Netcoin vàlida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid FlapXcoin address.</source>
+        <translation>La direcció introduïda &quot;%1&quot; no és una adreça FlapXcoin vàlida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1073,8 +1073,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>Netcoin-Qt</source>
-        <translation>Netcoin-Qt</translation>
+        <source>FlapXcoin-Qt</source>
+        <translation>FlapXcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1146,13 +1146,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Netcoin after logging in to the system.</source>
-        <translation>Inicia automàticament Netcoin després d&apos;entrar en el sistema.</translation>
+        <source>Automatically start FlapXcoin after logging in to the system.</source>
+        <translation>Inicia automàticament FlapXcoin després d&apos;entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Netcoin on system login</source>
-        <translation>&amp;Iniciar Netcoin amb l&apos;inici de sessió</translation>
+        <source>&amp;Start FlapXcoin on system login</source>
+        <translation>&amp;Iniciar FlapXcoin amb l&apos;inici de sessió</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1171,8 +1171,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Netcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obrir automàticament el port de client Netcoin en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
+        <source>Automatically open the FlapXcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obrir automàticament el port de client FlapXcoin en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1181,8 +1181,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Netcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecteu-vos a la xarxa Netcoin través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
+        <source>Connect to the FlapXcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecteu-vos a la xarxa FlapXcoin través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1256,8 +1256,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Netcoin.</source>
-        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar Netcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting FlapXcoin.</source>
+        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar FlapXcoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1271,8 +1271,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Netcoin addresses in the transaction list or not.</source>
-        <translation>Per mostrar Netcoin adreces a la llista de transaccions o no.</translation>
+        <source>Whether to show FlapXcoin addresses in the transaction list or not.</source>
+        <translation>Per mostrar FlapXcoin adreces a la llista de transaccions o no.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1318,8 +1318,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Netcoin.</source>
-        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Netcoin.</translation>
+        <source>This setting will take effect after restarting FlapXcoin.</source>
+        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar FlapXcoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1337,8 +1337,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Netcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot estar fora de data. La seva cartera es sincronitza automàticament amb la xarxa Netcoin després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FlapXcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot estar fora de data. La seva cartera es sincronitza automàticament amb la xarxa FlapXcoin després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1553,8 +1553,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Netcoin-Qt help message to get a list with possible Netcoin command-line options.</source>
-        <translation>Mostra el missatge d&apos;ajuda de Netcoin-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres Netcoin.</translation>
+        <source>Show the FlapXcoin-Qt help message to get a list with possible FlapXcoin command-line options.</source>
+        <translation>Mostra el missatge d&apos;ajuda de FlapXcoin-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres FlapXcoin.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1573,13 +1573,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Netcoin - Debug window</source>
-        <translation>Netcoin - Finestra Depuració</translation>
+        <source>FlapXcoin - Debug window</source>
+        <translation>FlapXcoin - Finestra Depuració</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Netcoin Core</source>
-        <translation>Nucli Netcoin</translation>
+        <source>FlapXcoin Core</source>
+        <translation>Nucli FlapXcoin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1588,8 +1588,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Netcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obriu el fitxer de registre de depuració Netcoin des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
+        <source>Open the FlapXcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obriu el fitxer de registre de depuració FlapXcoin des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1598,8 +1598,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the Netcoin RPC console.</source>
-        <translation>Benvingut a la consola RPC de Netcoin.</translation>
+        <source>Welcome to the FlapXcoin RPC console.</source>
+        <translation>Benvingut a la consola RPC de FlapXcoin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1672,8 +1672,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 NET</source>
-        <translation>123.456 NET {0.00 ?}</translation>
+        <source>0.00 FLAPX</source>
+        <translation>123.456 FLAPX {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1742,8 +1742,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 NET</source>
-        <translation>123.456 NET</translation>
+        <source>123.456 FLAPX</source>
+        <translation>123.456 FLAPX</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1757,8 +1757,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Introdueix una adreça Netcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Introdueix una adreça FlapXcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1857,8 +1857,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid Netcoin address</source>
-        <translation>ADVERTÈNCIA: Direcció Netcoin invàlida</translation>
+        <source>WARNING: Invalid FlapXcoin address</source>
+        <translation>ADVERTÈNCIA: Direcció FlapXcoin invàlida</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1931,8 +1931,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Introdueix una adreça Netcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Introdueix una adreça FlapXcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
 </context>
 <context>
@@ -1992,8 +1992,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Netcoin address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Netcoin</translation>
+        <source>Sign the message to prove you own this FlapXcoin address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça FlapXcoin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2024,8 +2024,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Netcoin address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Netcoin especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified FlapXcoin address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça FlapXcoin especificada.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2035,8 +2035,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Introdueix una adreça Netcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Introdueix una adreça FlapXcoin (p.ex. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2045,8 +2045,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Netcoin signature</source>
-        <translation>Introduïu la signatura Netcoin</translation>
+        <source>Enter FlapXcoin signature</source>
+        <translation>Introduïu la signatura FlapXcoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2616,8 +2616,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>Netcoin version</source>
-        <translation>versió Netcoin</translation>
+        <source>FlapXcoin version</source>
+        <translation>versió FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2801,8 +2801,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Netcoin will not work properly.</source>
-        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni Netcoin no funcionarà correctament.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong FlapXcoin will not work properly.</source>
+        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni FlapXcoin no funcionarà correctament.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2997,7 +2997,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, ha d&apos;establir un rpcpassword al fitxer de configuració:
 %s
@@ -3008,7 +3008,7 @@ rpcpassword=%s
 El nom d&apos;usuari i contrasenya NO HA DE SER el mateix.
 Si no hi ha l&apos;arxiu, s&apos;ha de crear amb els permisos de només lectura per al propietari.
 També es recomana establir alertnotify per a que se li notifiquin els problemes;
-per exemple: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+per exemple: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3134,13 +3134,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  Netcoin is probably already running.</source>
-        <translation>No es pot obtenir un bloqueig en el directori de dades %s. Netcoin probablement ja estigui en funcionament.</translation>
+        <source>Cannot obtain a lock on data directory %s.  FlapXcoin is probably already running.</source>
+        <translation>No es pot obtenir un bloqueig en el directori de dades %s. FlapXcoin probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3174,13 +3174,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Netcoin</source>
-        <translation>Error en carregar wallet.dat: La cartera requereix la versió més recent de Netcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of FlapXcoin</source>
+        <translation>Error en carregar wallet.dat: La cartera requereix la versió més recent de FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Netcoin to complete</source>
-        <translation>La cartera necessita ser reescrita: reiniciar Netcoin per completar</translation>
+        <source>Wallet needed to be rewritten: restart FlapXcoin to complete</source>
+        <translation>La cartera necessita ser reescrita: reiniciar FlapXcoin per completar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3249,8 +3249,8 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. Netcoin is probably already running.</source>
-        <translation>No es pot enllaçar a %s en aquest equip. Netcoin probablement ja estigui en funcionament.</translation>
+        <source>Unable to bind to %s on this computer. FlapXcoin is probably already running.</source>
+        <translation>No es pot enllaçar a %s en aquest equip. FlapXcoin probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-97"/>

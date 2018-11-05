@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Netcoin</source>
-        <translation>Tietoa Netcoinista</translation>
+        <source>About FlapXcoin</source>
+        <translation>Tietoa FlapXcoinista</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Netcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Netcoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;FlapXcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;FlapXcoin&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Netcoin developers</source>
+Copyright © 2014 The FlapXcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -64,8 +64,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your Netcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat Netcoin-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
+        <source>These are your FlapXcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Nämä ovat FlapXcoin-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -79,8 +79,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Netcoin address</source>
-        <translation>Allekirjoita viesti osoittaaksesi Netcoin-osoitteesi omistajuus</translation>
+        <source>Sign a message to prove you own a FlapXcoin address</source>
+        <translation>Allekirjoita viesti osoittaaksesi FlapXcoin-osoitteesi omistajuus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,8 +94,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified Netcoin address</source>
-        <translation>Vahvista viesti varmistaaksesi että kyseinen Netcoin-osoitteesi on allekirjoittanut sen</translation>
+        <source>Verify a message to ensure it was signed with a specified FlapXcoin address</source>
+        <translation>Vahvista viesti varmistaaksesi että kyseinen FlapXcoin-osoitteesi on allekirjoittanut sen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -236,7 +236,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja hukkaat salasanasi, &lt;b&gt;MENETÄT KAIKKI KOLIKKOSI&lt;/b&gt;!</translation>
+        <translation>Varoitus: Jos salaat lompakkosi ja hukkaat salasanasi, &lt;b&gt;MEFLAPXÄT KAIKKI KOLIKKOSI&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -262,8 +262,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-58"/>
-        <source>Netcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Netcoin-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
+        <source>FlapXcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>FlapXcoin-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,8 +376,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+6"/>
-        <source>Show information about Netcoin</source>
-        <translation>Näytä tietoja Netcoinista</translation>
+        <source>Show information about FlapXcoin</source>
+        <translation>Näytä tietoja FlapXcoinista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -426,13 +426,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-64"/>
-        <source>Send coins to a Netcoin address</source>
-        <translation>Lähetä kolikkoja Netcoin osoitteeseen</translation>
+        <source>Send coins to a FlapXcoin address</source>
+        <translation>Lähetä kolikkoja FlapXcoin osoitteeseen</translation>
     </message>
     <message>
         <location line="+47"/>
-        <source>Modify configuration options for Netcoin</source>
-        <translation>Mukauta Netcoinin konfigurointiasetuksia</translation>
+        <source>Modify configuration options for FlapXcoin</source>
+        <translation>Mukauta FlapXcoinin konfigurointiasetuksia</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -471,8 +471,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-202"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -481,8 +481,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+180"/>
-        <source>&amp;About Netcoin</source>
-        <translation>&amp;Tietoa Netcoinista</translation>
+        <source>&amp;About FlapXcoin</source>
+        <translation>&amp;Tietoa FlapXcoinista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -538,13 +538,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>Netcoin client</source>
-        <translation>Netcoin-asiakas</translation>
+        <source>FlapXcoin client</source>
+        <translation>FlapXcoin-asiakas</translation>
     </message>
     <message numerus="yes">
         <location line="+75"/>
-        <source>%n active connection(s) to Netcoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys Netcoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Netcoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to FlapXcoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys FlapXcoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä FlapXcoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -583,12 +583,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-312"/>
-        <source>About Netcoin card</source>
+        <source>About FlapXcoin card</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Netcoin card</source>
+        <source>Show information about FlapXcoin card</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -667,8 +667,8 @@ Osoite: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Netcoin address or malformed URI parameters.</source>
-        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä Netcoin-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid FlapXcoin address or malformed URI parameters.</source>
+        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä FlapXcoin-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -727,8 +727,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. Netcoin can no longer continue safely and will quit.</source>
-        <translation>Vakava virhe kohdattu. Netcoin-ohjelma ei voi enää jatkaa turvallisesti ja sulkee itsensä.</translation>
+        <source>A fatal error occurred. FlapXcoin can no longer continue safely and will quit.</source>
+        <translation>Vakava virhe kohdattu. FlapXcoin-ohjelma ei voi enää jatkaa turvallisesti ja sulkee itsensä.</translation>
     </message>
 </context>
 <context>
@@ -1061,8 +1061,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Netcoin address.</source>
-        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty Netcoin-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid FlapXcoin address.</source>
+        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty FlapXcoin-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1080,8 +1080,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>Netcoin-Qt</source>
-        <translation>Netcoin-Qt</translation>
+        <source>FlapXcoin-Qt</source>
+        <translation>FlapXcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1153,13 +1153,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Netcoin after logging in to the system.</source>
-        <translation>Käynnistä Netcoin-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
+        <source>Automatically start FlapXcoin after logging in to the system.</source>
+        <translation>Käynnistä FlapXcoin-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Netcoin on system login</source>
-        <translation>%Käynnistä Netcoin-asiakasohjelma kirjautuessasi</translation>
+        <source>&amp;Start FlapXcoin on system login</source>
+        <translation>%Käynnistä FlapXcoin-asiakasohjelma kirjautuessasi</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1178,8 +1178,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Netcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Netcoin-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
+        <source>Automatically open the FlapXcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa FlapXcoin-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1188,8 +1188,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Netcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Yhdistä Netcoin-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n läpi).</translation>
+        <source>Connect to the FlapXcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Yhdistä FlapXcoin-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n läpi).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1263,8 +1263,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Netcoin.</source>
-        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta Netcoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting FlapXcoin.</source>
+        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta FlapXcoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1278,8 +1278,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Netcoin addresses in the transaction list or not.</source>
-        <translation>Näytä tai piilota Netcoin-osoitteet rahansiirtolistassa.</translation>
+        <source>Whether to show FlapXcoin addresses in the transaction list or not.</source>
+        <translation>Näytä tai piilota FlapXcoin-osoitteet rahansiirtolistassa.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1325,8 +1325,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Netcoin.</source>
-        <translation>Tämä asetus tulee voimaan vasta Netcoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>This setting will take effect after restarting FlapXcoin.</source>
+        <translation>Tämä asetus tulee voimaan vasta FlapXcoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1344,8 +1344,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Netcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Netcoin-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FlapXcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti FlapXcoin-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1560,8 +1560,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Netcoin-Qt help message to get a list with possible Netcoin command-line options.</source>
-        <translation>Näytä Netcoin-Qt:n avustusohje saadaksesi listan käytettävistä Netcoinin komentokehotteen määritteistä.</translation>
+        <source>Show the FlapXcoin-Qt help message to get a list with possible FlapXcoin command-line options.</source>
+        <translation>Näytä FlapXcoin-Qt:n avustusohje saadaksesi listan käytettävistä FlapXcoinin komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1580,13 +1580,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Netcoin - Debug window</source>
-        <translation>Netcoin - Debug-ikkuna</translation>
+        <source>FlapXcoin - Debug window</source>
+        <translation>FlapXcoin - Debug-ikkuna</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Netcoin Core</source>
-        <translation>Netcoinin ydin</translation>
+        <source>FlapXcoin Core</source>
+        <translation>FlapXcoinin ydin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1595,8 +1595,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Netcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Netcoin-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
+        <source>Open the FlapXcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa FlapXcoin-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1605,8 +1605,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the Netcoin RPC console.</source>
-        <translation>Tervetuloa Netcoinin RPC-konsoliin.</translation>
+        <source>Welcome to the FlapXcoin RPC console.</source>
+        <translation>Tervetuloa FlapXcoinin RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1679,8 +1679,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 NET</source>
-        <translation>123.456 NET {0.00 ?}</translation>
+        <source>0.00 FLAPX</source>
+        <translation>123.456 FLAPX {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1749,8 +1749,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 NET</source>
-        <translation>123.456 NET</translation>
+        <source>123.456 FLAPX</source>
+        <translation>123.456 FLAPX</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1764,8 +1764,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Syötä Netcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Syötä FlapXcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1864,8 +1864,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid Netcoin address</source>
-        <translation>VAROITUS: Epäkelpo Netcoin-osoite</translation>
+        <source>WARNING: Invalid FlapXcoin address</source>
+        <translation>VAROITUS: Epäkelpo FlapXcoin-osoite</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1938,8 +1938,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Syötä Netcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Syötä FlapXcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
 </context>
 <context>
@@ -1999,8 +1999,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Netcoin address</source>
-        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän Netcoin-osoitteen</translation>
+        <source>Sign the message to prove you own this FlapXcoin address</source>
+        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän FlapXcoin-osoitteen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2031,8 +2031,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Netcoin address</source>
-        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä Netcoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified FlapXcoin address</source>
+        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä FlapXcoin-osoitteella</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2042,8 +2042,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Syötä Netcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Syötä FlapXcoin-osoite (esim. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2052,8 +2052,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Netcoin signature</source>
-        <translation>Syötä Netcoin-allekirjoitus</translation>
+        <source>Enter FlapXcoin signature</source>
+        <translation>Syötä FlapXcoin-allekirjoitus</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2623,8 +2623,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>Netcoin version</source>
-        <translation>Netcoinin versio</translation>
+        <source>FlapXcoin version</source>
+        <translation>FlapXcoinin versio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2808,8 +2808,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Netcoin will not work properly.</source>
-        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, Netcoin ei toimi oikein.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong FlapXcoin will not work properly.</source>
+        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, FlapXcoin ei toimi oikein.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -3004,7 +3004,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, sinun on asetettava rpcpassword asetustiedostoon:
 %s
@@ -3014,7 +3014,7 @@ rpcpassword=%s
 (Sinun ei tarvitse muistaa tätä salasanaa)
 Käyttäjänimen ja salasanan EI TULE OLLA SAMOJA.
 Jos tiedostoa ei ole olemassa, luo se asettaen samalla omistajan lukuoikeudet.
-On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; esimerkiksi: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; esimerkiksi: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3139,13 +3139,13 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  Netcoin is probably already running.</source>
-        <translation>Ei voida saavuttaa lukkoa datatiedostossa %s. Netcoin-asiakasohjelma on ehkä jo käynnissä.</translation>
+        <source>Cannot obtain a lock on data directory %s.  FlapXcoin is probably already running.</source>
+        <translation>Ei voida saavuttaa lukkoa datatiedostossa %s. FlapXcoin-asiakasohjelma on ehkä jo käynnissä.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3179,13 +3179,13 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Netcoin</source>
-        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version Netcoin-asiakasohjelmasta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of FlapXcoin</source>
+        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version FlapXcoin-asiakasohjelmasta</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Netcoin to complete</source>
-        <translation>Lompakko on kirjoitettava uudelleen: käynnistä Netcoin-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
+        <source>Wallet needed to be rewritten: restart FlapXcoin to complete</source>
+        <translation>Lompakko on kirjoitettava uudelleen: käynnistä FlapXcoin-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3254,8 +3254,8 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. Netcoin is probably already running.</source>
-        <translation>Ei voitu liittää %s tällä tietokoneella. Netcoin-asiakasohjelma on jo ehkä päällä.</translation>
+        <source>Unable to bind to %s on this computer. FlapXcoin is probably already running.</source>
+        <translation>Ei voitu liittää %s tällä tietokoneella. FlapXcoin-asiakasohjelma on jo ehkä päällä.</translation>
     </message>
     <message>
         <location line="-97"/>

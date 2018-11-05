@@ -208,15 +208,15 @@ void NetworkPage::updateStatistics()
 
     if(volume > volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
     }
     else if(volume < volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
     }
     else
     {
-        ui->volumeBox->setText(qVolume + " NET");
+        ui->volumeBox->setText(qVolume + " FLAPX");
     }
 
     updatePrevious(nHeight, nMinWeight, nNetworkWeight, nSubsidy, pHardness, pHardness2, pPawrate2, Qlpawrate, peers, volume);

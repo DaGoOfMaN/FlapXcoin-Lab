@@ -4,20 +4,20 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <source>About Netcoin</source>
-        <translation>Au sujet de Netcoin</translation>
+        <source>About FlapXcoin</source>
+        <translation>Au sujet de FlapXcoin</translation>
     </message>
     <message>
-        <source>&lt;b&gt;Netcoin&lt;/b&gt; version</source>
-        <translation>Version de &lt;b&gt;Netcoin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;FlapXcoin&lt;/b&gt; version</source>
+        <translation>Version de &lt;b&gt;FlapXcoin&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Netcoin developers</source>
+Copyright © 2014 The FlapXcoin developers</source>
         <translation>Copyright © 2009-2014 Les développeurs Bitcoin
 Copyright © 2012-2014 Les développeurs NovaCoin
-Copyright © 2014 Les développeurs Netcoin</translation>
+Copyright © 2014 Les développeurs FlapXcoin</translation>
     </message>
     <message>
         <source>
@@ -35,27 +35,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About NetCoin</source>
-        <translation>Au sujet de Netcoin</translation>
+        <source>About FlapXcoin</source>
+        <translation>Au sujet de FlapXcoin</translation>
     </message>
     <message>
         <location line="+160"/>
-        <source>&lt;b&gt;NetCoin&lt;/b&gt; version</source>
-        <translation>Version de &lt;b&gt;Netcoin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;FlapXcoin&lt;/b&gt; version</source>
+        <translation>Version de &lt;b&gt;FlapXcoin&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+159"/>
         <source>
 Copyright © 2009-2012 Bitcoin Developers
 Copyright © 2012 PeerCoin Developers
-Copyright © 2014 NetCoin Developers
+Copyright © 2014 FlapXcoin Developers
 
 Lead Developer: Who
 design by: meee and regtable69
 Translated by: Arjan Dekkers - Dutch</source>
         <translation>Copyright © 2009-2014 Les développeurs Bitcoin
 Copyright © 2012-2014 Les développeurs NovaCoin
-Copyright © 2014 Les développeurs Netcoin
+Copyright © 2014 Les développeurs FlapXcoin
 
 Développeur PIR:Who
 Design: Meee
@@ -101,13 +101,13 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Nouvelle adresse</translation>
     </message>
     <message>
-        <source>These are your Netcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your FlapXcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>Ce sont vos adresses pour recevoir vos paiements. Vous pouvez utiliser une adresse différente pour chaque réception afin d&apos;identifier facilement le payeur.</translation>
     </message>
     <message>
         <location line="-81"/>
-        <source>Here are your NetCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Voici vos adresses NetCoin qui vous permettent de recevoir des paiements. Vous pouvez choisir d&apos;en fournir une différente à chaque expéditeur. Ainsi vous pouvez savoir quelles sont les personnes qui vous ont payé.</translation>
+        <source>Here are your FlapXcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Voici vos adresses FlapXcoin qui vous permettent de recevoir des paiements. Vous pouvez choisir d&apos;en fournir une différente à chaque expéditeur. Ainsi vous pouvez savoir quelles sont les personnes qui vous ont payé.</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -131,7 +131,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/createNewNetcoinAddress.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/toolTip/res/tooltips/createNewFlapXcoinAddress.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
@@ -160,8 +160,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation></translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a Netcoin address</source>
-        <translation>Signer un message afin de valider l&apos;identité de votre adresse Netcoin</translation>
+        <source>Sign a message to prove you own a FlapXcoin address</source>
+        <translation>Signer un message afin de valider l&apos;identité de votre adresse FlapXcoin</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -173,8 +173,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Effacer l&apos;adresse actuellement sélectionnée de la liste</translation>
     </message>
     <message>
-        <source>Verify a message to ensure it was signed with a specified Netcoin address</source>
-        <translation>Vérifier un message pour s&apos;assurer qu&apos;il vient d&apos;un adresse Netcoin spécifique</translation>
+        <source>Verify a message to ensure it was signed with a specified FlapXcoin address</source>
+        <translation>Vérifier un message pour s&apos;assurer qu&apos;il vient d&apos;un adresse FlapXcoin spécifique</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -319,7 +319,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Avertissement : Si vous chiffrez votre portefeuille et perdez votre passphrase, vous ne pourrez &lt;b&gt;plus accéder à vos Netcoins&lt;/b&gt;!</translation>
+        <translation>Avertissement : Si vous chiffrez votre portefeuille et perdez votre passphrase, vous ne pourrez &lt;b&gt;plus accéder à vos FlapXcoins&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -345,8 +345,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>Netcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>L&apos;application Netcoin va désormais se terminer afin de finaliser le processus de chiffrage. Merci de noter que le chiffrage du portefeuille ne garantit pas de se prémunir du vol via utilisation de malware, qui auraient pu infecter votre ordinateur. </translation>
+        <source>FlapXcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>L&apos;application FlapXcoin va désormais se terminer afin de finaliser le processus de chiffrage. Merci de noter que le chiffrage du portefeuille ne garantit pas de se prémunir du vol via utilisation de malware, qui auraient pu infecter votre ordinateur. </translation>
     </message>
     <message>
         <location line="+13"/>
@@ -455,8 +455,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Netcoin</source>
-        <translation>Afficher des informations au sujet de Netcoin</translation>
+        <source>Show information about FlapXcoin</source>
+        <translation>Afficher des informations au sujet de FlapXcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -507,13 +507,13 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Exporter...</translation>
     </message>
     <message>
-        <source>Send coins to a Netcoin address</source>
-        <translation>Envoyer des monnaies vers une adresse Netcoin</translation>
+        <source>Send coins to a FlapXcoin address</source>
+        <translation>Envoyer des monnaies vers une adresse FlapXcoin</translation>
     </message>
     <message>
         <location line="-17"/>
-        <source>Modify configuration options for Netcoin</source>
-        <translation>Modification des options de configuration de Netcoin</translation>
+        <source>Modify configuration options for FlapXcoin</source>
+        <translation>Modification des options de configuration de FlapXcoin</translation>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
@@ -551,8 +551,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-254"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -616,8 +616,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+25"/>
-        <source>&amp;About Netcoin</source>
-        <translation>&amp;Au sujet de Netcoin</translation>
+        <source>&amp;About FlapXcoin</source>
+        <translation>&amp;Au sujet de FlapXcoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -683,15 +683,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+61"/>
-        <source>Netcoin client</source>
-        <translation>Client Netcoin</translation>
+        <source>FlapXcoin client</source>
+        <translation>Client FlapXcoin</translation>
     </message>
     <message numerus="yes">
         <location line="+72"/>
-        <source>%n active connection(s) to Netcoin network</source>
+        <source>%n active connection(s) to FlapXcoin network</source>
         <translation>
-            <numerusform>%n connexion active au réseau Netcoin</numerusform>
-            <numerusform>%n connexions actives au réseau Netcoin</numerusform>
+            <numerusform>%n connexion active au réseau FlapXcoin</numerusform>
+            <numerusform>%n connexions actives au réseau FlapXcoin</numerusform>
         </translation>
     </message>
     <message>
@@ -752,12 +752,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         </translation>
     </message>
     <message>
-        <source>About Netcoin card</source>
-        <translation>Au sujet de la carte Netcoin</translation>
+        <source>About FlapXcoin card</source>
+        <translation>Au sujet de la carte FlapXcoin</translation>
     </message>
     <message>
-        <source>Show information about Netcoin card</source>
-        <translation>Informations sur la carte Netcoin</translation>
+        <source>Show information about FlapXcoin card</source>
+        <translation>Informations sur la carte FlapXcoin</translation>
     </message>
     <message>
         <location line="-336"/>
@@ -850,8 +850,8 @@ Adresse : %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Netcoin address or malformed URI parameters.</source>
-        <translation>L&apos;adresse du portefeuille Netcoin n&apos;as pas pu être correctement identifiée, car invalide ou malformée.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid FlapXcoin address or malformed URI parameters.</source>
+        <translation>L&apos;adresse du portefeuille FlapXcoin n&apos;as pas pu être correctement identifiée, car invalide ou malformée.</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -925,8 +925,8 @@ Adresse : %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+110"/>
-        <source>A fatal error occurred. Netcoin can no longer continue safely and will quit.</source>
-        <translation>Une erreur fatale a été rencontrée. L&apos;application Netcoin ne peut plus être s&apos;exécuter de façon correcte et doit se terminer.</translation>
+        <source>A fatal error occurred. FlapXcoin can no longer continue safely and will quit.</source>
+        <translation>Une erreur fatale a été rencontrée. L&apos;application FlapXcoin ne peut plus être s&apos;exécuter de façon correcte et doit se terminer.</translation>
     </message>
 </context>
 <context>
@@ -970,7 +970,7 @@ Adresse : %4
         <location line="+74"/>
         <location line="+74"/>
         <location line="+32"/>
-        <source>0.00 NET</source>
+        <source>0.00 FLAPX</source>
         <translation></translation>
     </message>
     <message>
@@ -1274,8 +1274,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Netcoin address.</source>
-        <translation>L&apos;adresse &quot;%1&quot; renseignée n&apos;est pas une adresse Netcoin valide.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid FlapXcoin address.</source>
+        <translation>L&apos;adresse &quot;%1&quot; renseignée n&apos;est pas une adresse FlapXcoin valide.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1316,8 +1316,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>Netcoin-Qt</source>
-        <translation>Netcoin-Qt</translation>
+        <source>FlapXcoin-Qt</source>
+        <translation>FlapXcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1364,18 +1364,18 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Netcoin-Qt.</source>
-        <translation>Bienvenue à Netcoin-Qt.</translation>
+        <source>Welcome to FlapXcoin-Qt.</source>
+        <translation>Bienvenue à FlapXcoin-Qt.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Netcoin-Qt will store its data.</source>
-        <translation>Comme cela est la première fois que le programme est lancé, vous pouvez choisir la location où Netcoin-Qt sauvegarde des données.</translation>
+        <source>As this is the first time the program is launched, you can choose where FlapXcoin-Qt will store its data.</source>
+        <translation>Comme cela est la première fois que le programme est lancé, vous pouvez choisir la location où FlapXcoin-Qt sauvegarde des données.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Netcoin-Qt will download and store a copy of the NetCoin block chain. At least 1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation>Netcoin-Qt va télécharger et sauvegarder une copie de la chaîne de blocs Netcoin. Au minimum 1 Go de données seront sauvegardées dans ce répertoire, et la chaîne de blocs va grossir au fil du temps.</translation>
+        <source>FlapXcoin-Qt will download and store a copy of the FlapXcoin block chain. At least 1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <translation>FlapXcoin-Qt va télécharger et sauvegarder une copie de la chaîne de blocs FlapXcoin. Au minimum 1 Go de données seront sauvegardées dans ce répertoire, et la chaîne de blocs va grossir au fil du temps.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1419,9 +1419,9 @@ p, li { white-space: pre-wrap; }
 &lt;p&gt;&lt;span&gt;So what is “staking”? Allow us to explain it a little... &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;Satoshi created cryptocurrencies with fairness in mind. He envisioned a decentralized method for providing secure and anonymous storage and transference of currency that focused on the needs of private individuals of the digital era. This system includes the tracking and verification of the integrity of transaction data by utilizing consumer-grade computer components to perform calculations. To reward users utilizing their hardware to complete this work, and simultaneously control inflation, Satoshi integrated a reward system into this process. This is now known as &amp;quot;mining&amp;quot; or Proof of work (POW). At a set time interval, the system generates and releases new coins to miners.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;POS doesn’t require fancy equipment. Users can utilize very simple laptops or desktops it doesn&apos;t use a lot of power and is very easy to set up. You simply install the wallet, place some coins inside it and wait! Now I am sure we can agree that most people can do this very easily.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Netcoin Developers put it to the community, and asked, is this what we want? The response was a resounding YES! &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;FlapXcoin Developers put it to the community, and asked, is this what we want? The response was a resounding YES! &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;There is nothing special you need to do to get staking, all you need to do is simply place coins in your wallet and wait. That is all.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;The POS system implemented by Netcoin frees users of the need to purchase expensive hardware for their mining operation to remain relevant, but POS offers better security. To provide incentive, we have made a system where users get rewarded more as the amount they stake increases! We are calling it Personal investment rate or PIR for short. PIR works on a sliding scale, so it always benefits you to own more Netcoins! You can set your own interest rate by simply adjusting how many coins you wish to stake!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;p&gt;&lt;span&gt;The POS system implemented by FlapXcoin frees users of the need to purchase expensive hardware for their mining operation to remain relevant, but POS offers better security. To provide incentive, we have made a system where users get rewarded more as the amount they stake increases! We are calling it Personal investment rate or PIR for short. PIR works on a sliding scale, so it always benefits you to own more FlapXcoins! You can set your own interest rate by simply adjusting how many coins you wish to stake!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1429,9 +1429,9 @@ p, li { white-space: pre-wrap; }
 &lt;p&gt;&lt;span&gt;Qu&apos;est ce que le &quot;staking&quot;? Permettez nous d&apos;expliquer un peu ceci... &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;Satashi a crée les cryptomonnaies avec à l&apos;esprit l&apos;égalité. Il envisagea une méthode décentralisée pour le stokage et le transfert sécurisé et anonyme de monnaie focalisé sur des particuliers de l&apos;ère digital. Ce système inclue le suivi et la vérification de l&apos;intégrité des données de transaction en utilisant des composants informatiques de grande consommation pour effectuer les calculs. Pour récompenser les utilisateurs utilisant leur matériel pour réaliser ce travail et simultanémment controler l&apos;inflation, Satoshi a intégré un système de récompense directement dans le processus. Celui-ci est maintenant connu sous le nom de &amp;quot;minage&amp;quot; ou encore Proof of work (POW). A interval régulier, le système génère et délivre de nouveaux coins aux mineurs.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt; Le POS ne requiert pas d&apos;équipement de luxe. Les utilisateurs peuvent utiliser des ordinateurs portables ou de bureau très simples. Il n&apos;utilise pas beaucoup de puissance et est très très facile à mettre en place. Vous installez le portefeuille, placez des coins à l&apos;intérieur et vous attendez! Maintenant je suis sur que nous somme d&apos;accord sur le fait que la plupart des gens peuvent faire cela très facilement.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt; Les Développeurs de Netcoin l&apos;ont fourni à la communauté, et demandé, est-ce que nous voulons? La réponse était un retentissant OUI!&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt; Les Développeurs de FlapXcoin l&apos;ont fourni à la communauté, et demandé, est-ce que nous voulons? La réponse était un retentissant OUI!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;Vous n&apos;avez rien de particulier à faire pour réaliser le staking, tout ce qu&apos;il faut c&apos;est de placer des coins dans le portefeuille et d&apos;attendre. C&apos;est tout.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Le système de POS implémenté par Netcoin libèrent les utilisateurs de la nécessité d&apos;acheter du matériel couteux pour les opérations de minage, mais le POS offre une meilleur sécurité. Pour une meilleur motivation, nous avons fait un système où les utilisateurs sont mieux récompensés au fur et à mesure que leur quantité de coins qui participent au POS augmente! Nous appelons ça le Personal Invesment Rate (Taux d&apos;investissement personnel) ou PIR pour faire court. Le PIR fonctionne sur une échelle mobile, ainsi il est toujours bénéfique pour vous de posséder plus de Netcoins! Vous pouvez établir vous propre taux d&apos;intérêt simplement en ajustant combien de coins vous souhaitez voir participer au stake! &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p&gt;&lt;span&gt;Le système de POS implémenté par FlapXcoin libèrent les utilisateurs de la nécessité d&apos;acheter du matériel couteux pour les opérations de minage, mais le POS offre une meilleur sécurité. Pour une meilleur motivation, nous avons fait un système où les utilisateurs sont mieux récompensés au fur et à mesure que leur quantité de coins qui participent au POS augmente! Nous appelons ça le Personal Invesment Rate (Taux d&apos;investissement personnel) ou PIR pour faire court. Le PIR fonctionne sur une échelle mobile, ainsi il est toujours bénéfique pour vous de posséder plus de FlapXcoins! Vous pouvez établir vous propre taux d&apos;intérêt simplement en ajustant combien de coins vous souhaitez voir participer au stake! &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -1467,13 +1467,13 @@ p, li { white-space: pre-wrap; }
         <translation>Réserve</translation>
     </message>
     <message>
-        <source>Automatically start Netcoin after logging in to the system.</source>
-        <translation>Démarrage automatique du client Netcoin lors de la connexion au système.</translation>
+        <source>Automatically start FlapXcoin after logging in to the system.</source>
+        <translation>Démarrage automatique du client FlapXcoin lors de la connexion au système.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>&amp;Start Netcoin on system login</source>
-        <translation>&amp;Démarrage du client Netcoin à la connexion au système</translation>
+        <source>&amp;Start FlapXcoin on system login</source>
+        <translation>&amp;Démarrage du client FlapXcoin à la connexion au système</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1491,8 +1491,8 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Réseau</translation>
     </message>
     <message>
-        <source>Automatically open the Netcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouverture automatique du port client de Netcoin sur le routeur. Ceci ne fonctionne que dans le cas où le support UPnP sur votre routeur existe et est actif.</translation>
+        <source>Automatically open the FlapXcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouverture automatique du port client de FlapXcoin sur le routeur. Ceci ne fonctionne que dans le cas où le support UPnP sur votre routeur existe et est actif.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1500,23 +1500,23 @@ p, li { white-space: pre-wrap; }
         <translation>Mapper le port avec l&apos;&amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Netcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connexion au réseau Netcoin à travers un proxy SOCKS (e.g. Connexion via le réseau Tor).</translation>
+        <source>Connect to the FlapXcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connexion au réseau FlapXcoin à travers un proxy SOCKS (e.g. Connexion via le réseau Tor).</translation>
     </message>
     <message>
         <location line="-43"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically start Netcoin after logging in to the system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Démarrer automatiquement NetCoin après l&apos;indentification au système.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically start FlapXcoin after logging in to the system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Démarrer automatiquement FlapXcoin après l&apos;indentification au système.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically open the Netcoin client port on the router. This only works when your router supports UPnP and it is enabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvre automatiquement le port du client NetCoin sur le router. Ceci fonctionne uniquement quand votre router supporte le protocole UPnP et que ce dernier est activé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatically open the FlapXcoin client port on the router. This only works when your router supports UPnP and it is enabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvre automatiquement le port du client FlapXcoin sur le router. Ceci fonctionne uniquement quand votre router supporte le protocole UPnP et que ce dernier est activé.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connect to the Netcoin network through a SOCKS proxy (e.g. when connecting through Tor).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connexion au réseau Netcoin par un proxy SOCKS (par exemple quand vous vous connectez par Tor).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connect to the FlapXcoin network through a SOCKS proxy (e.g. when connecting through Tor).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connexion au réseau FlapXcoin par un proxy SOCKS (par exemple quand vous vous connectez par Tor).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1590,17 +1590,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The user interface language can be set here. This setting will take effect after restarting Netcoin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La langue de l&apos;interface utilisateur peut être définie ici. Ce paramétrage prendra effet après le redémarrage de NetCoin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The user interface language can be set here. This setting will take effect after restarting FlapXcoin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La langue de l&apos;interface utilisateur peut être définie ici. Ce paramétrage prendra effet après le redémarrage de FlapXcoin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Whether to show Netcoin addresses in the transaction list or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Montrer ou non les adresses NetCoin dans la liste des transactions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Whether to show FlapXcoin addresses in the transaction list or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Montrer ou non les adresses FlapXcoin dans la liste des transactions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Netcoin.</source>
-        <translation>La langue d&apos;interface de l&apos;utilisateur peut être définie ici. Les modification seront prises en compte après redémarrage de l&apos;application Netcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting FlapXcoin.</source>
+        <translation>La langue d&apos;interface de l&apos;utilisateur peut être définie ici. Les modification seront prises en compte après redémarrage de l&apos;application FlapXcoin.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -1613,8 +1613,8 @@ p, li { white-space: pre-wrap; }
         <translation>Choisissez la sous-unité par défaut pour l&apos;affichage dans l&apos;interface et lors de l&apos;envoi de pièces.</translation>
     </message>
     <message>
-        <source>Whether to show Netcoin addresses in the transaction list or not.</source>
-        <translation>Afficher les adresses Netcoin au sein de la liste de transactions.</translation>
+        <source>Whether to show FlapXcoin addresses in the transaction list or not.</source>
+        <translation>Afficher les adresses FlapXcoin au sein de la liste de transactions.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1660,8 +1660,8 @@ p, li { white-space: pre-wrap; }
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Netcoin.</source>
-        <translation>Les paramètres prendront effet après redémarrage du client Netcoin.</translation>
+        <source>This setting will take effect after restarting FlapXcoin.</source>
+        <translation>Les paramètres prendront effet après redémarrage du client FlapXcoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1697,7 +1697,7 @@ p, li { white-space: pre-wrap; }
         <location line="+32"/>
         <location line="+32"/>
         <location line="+32"/>
-        <source>0 NET</source>
+        <source>0 FLAPX</source>
         <translation></translation>
     </message>
     <message>
@@ -1727,7 +1727,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+12"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;0 NET&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;0 FLAPX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
@@ -1837,8 +1837,8 @@ p, li { white-space: pre-wrap; }
         <translation>0</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Netcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Les informations affichées peuvent être obsolètes. Votre portefeuille se synchronise automatiquement avec le réseau Netcoin mais ce processus n&apos;est pas encore terminé.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FlapXcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Les informations affichées peuvent être obsolètes. Votre portefeuille se synchronise automatiquement avec le réseau FlapXcoin mais ce processus n&apos;est pas encore terminé.</translation>
     </message>
     <message>
         <source>Stake:</source>
@@ -1964,8 +1964,8 @@ p, li { white-space: pre-wrap; }
     <name>QObject</name>
     <message>
         <location filename="../intro.cpp" line="-32"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2064,13 +2064,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-13"/>
-        <source>NetCoin - Debug window</source>
+        <source>FlapXcoin - Debug window</source>
         <translation>Fenêtre de débuggage</translation>
     </message>
     <message>
         <location line="+22"/>
-        <source>NetCoin Core</source>
-        <translation>Coeur NetCoin</translation>
+        <source>FlapXcoin Core</source>
+        <translation>Coeur FlapXcoin</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -2119,8 +2119,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+161"/>
-        <source>Open the NetCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ouvre le fichier d&apos;historique de débuggage NetCoin du répertoire contenant les données. Ceci peut prendre quelques secondes pour les fichiers importants.</translation>
+        <source>Open the FlapXcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ouvre le fichier d&apos;historique de débuggage FlapXcoin du répertoire contenant les données. Ceci peut prendre quelques secondes pour les fichiers importants.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2134,12 +2134,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the NetCoin-Qt help message to get a list with possible NetCoin command-line options.</source>
-        <translation>Montre le message d&apos;aide de NetCoin-Qt qui donne la liste des options NetCoin possible en ligne de commande.</translation>
+        <source>Show the FlapXcoin-Qt help message to get a list with possible FlapXcoin command-line options.</source>
+        <translation>Montre le message d&apos;aide de FlapXcoin-Qt qui donne la liste des options FlapXcoin possible en ligne de commande.</translation>
     </message>
     <message>
-        <source>Show the Netcoin-Qt help message to get a list with possible Netcoin command-line options.</source>
-        <translation>Afficher le message d&apos;aide Netcoin-Qt afin d&apos;obtenir la liste des options de de L&apos;outil en ligne de commande Netcoin.</translation>
+        <source>Show the FlapXcoin-Qt help message to get a list with possible FlapXcoin command-line options.</source>
+        <translation>Afficher le message d&apos;aide FlapXcoin-Qt afin d&apos;obtenir la liste des options de de L&apos;outil en ligne de commande FlapXcoin.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2157,12 +2157,12 @@ p, li { white-space: pre-wrap; }
         <translation>Date de compilation</translation>
     </message>
     <message>
-        <source>Netcoin - Debug window</source>
-        <translation>Netcoin - Fenêtre de déboggage</translation>
+        <source>FlapXcoin - Debug window</source>
+        <translation>FlapXcoin - Fenêtre de déboggage</translation>
     </message>
     <message>
-        <source>Netcoin Core</source>
-        <translation>Netcoin Core</translation>
+        <source>FlapXcoin Core</source>
+        <translation>FlapXcoin Core</translation>
     </message>
     <message>
         <location line="+305"/>
@@ -2170,8 +2170,8 @@ p, li { white-space: pre-wrap; }
         <translation>Journal de débogage</translation>
     </message>
     <message>
-        <source>Open the Netcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Ouvrir le fichier journal de debug Netcoin au sein du répertoire courant. Cette opération peut prendre quelques secondes dans le cas de fichiers journaux volumineux.</translation>
+        <source>Open the FlapXcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Ouvrir le fichier journal de debug FlapXcoin au sein du répertoire courant. Cette opération peut prendre quelques secondes dans le cas de fichiers journaux volumineux.</translation>
     </message>
     <message>
         <location line="+224"/>
@@ -2180,8 +2180,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the Netcoin RPC console.</source>
-        <translation>Bienvenue sur la console RPC de Netcoin.</translation>
+        <source>Welcome to the FlapXcoin RPC console.</source>
+        <translation>Bienvenue sur la console RPC de FlapXcoin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2283,8 +2283,8 @@ p, li { white-space: pre-wrap; }
         <translation>Montant:</translation>
     </message>
     <message>
-        <source>0.00 NET</source>
-        <translation>123.456 NET {0.00 ?}</translation>
+        <source>0.00 FLAPX</source>
+        <translation>123.456 FLAPX {0.00 ?}</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2349,8 +2349,8 @@ p, li { white-space: pre-wrap; }
         <translation>Solde:</translation>
     </message>
     <message>
-        <source>123.456 NET</source>
-        <translation>123.456 NET</translation>
+        <source>123.456 FLAPX</source>
+        <translation>123.456 FLAPX</translation>
     </message>
     <message>
         <source>Confirm the send action</source>
@@ -2362,8 +2362,8 @@ p, li { white-space: pre-wrap; }
         <translation>E&amp;nvoyer</translation>
     </message>
     <message>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse Netcoin (par ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin (par ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-160"/>
@@ -2416,8 +2416,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-109"/>
-        <source>Enter a Netcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse NetCoin</translation>
+        <source>Enter a FlapXcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -2466,8 +2466,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid Netcoin address</source>
-        <translation>AVERTISSEMENT: Adresse Netcoin Invalide</translation>
+        <source>WARNING: Invalid FlapXcoin address</source>
+        <translation>AVERTISSEMENT: Adresse FlapXcoin Invalide</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -2477,7 +2477,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location line="+4"/>
         <source>WARNING: unknown change address</source>
-        <translation>AVERTISSEMENT: Adresse Netcoin Invalide</translation>
+        <translation>AVERTISSEMENT: Adresse FlapXcoin Invalide</translation>
     </message>
 </context>
 <context>
@@ -2529,8 +2529,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter a Netcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse NetCoin</translation>
+        <source>Enter a FlapXcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="+89"/>
@@ -2564,8 +2564,8 @@ p, li { white-space: pre-wrap; }
         <translation>Supprimer ce destinataire</translation>
     </message>
     <message>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse Netcoin (ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin (ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
 </context>
 <context>
@@ -2582,13 +2582,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+78"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/PurchaseNetcoins.png&quot;/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;You can never have too many Netcoins!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/PurchaseNetcoins.png&quot;/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Vous ne pouvez jamais avoir trop de Netcoins!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/PurchaseFlapXcoins.png&quot;/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;You can never have too many FlapXcoins!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/PurchaseFlapXcoins.png&quot;/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Vous ne pouvez jamais avoir trop de FlapXcoins!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Exchange owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt; you would like to add Netcoins to your exchange please get in touch at support@netcoinfoundation.org.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Propriétaire de l&apos;échange ?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt;vous voulez ajouter Netcoins à votre échange, merci de nous en informer par mail : support@netcoinfoundation.org &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Exchange owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt; you would like to add FlapXcoins to your exchange please get in touch at support@netcoinfoundation.org.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Propriétaire de l&apos;échange ?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt;vous voulez ajouter FlapXcoins à votre échange, merci de nous en informer par mail : support@netcoinfoundation.org &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -2612,8 +2612,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+74"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/SpendNetcoins.png&quot;/&gt;&lt;br/&gt;&lt;span&gt;Make sure you have the latest client as more stores will be added.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/SpendNetcoins.png&quot;/&gt;&lt;br/&gt;&lt;span&gt;Assurez-vous que vous avez le dernier client car plus de commerces seront ajoutés.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/SpendFlapXcoins.png&quot;/&gt;&lt;br/&gt;&lt;span&gt;Make sure you have the latest client as more stores will be added.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/images/res/images/HeaderText/SpendFlapXcoins.png&quot;/&gt;&lt;br/&gt;&lt;span&gt;Assurez-vous que vous avez le dernier client car plus de commerces seront ajoutés.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -2732,8 +2732,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+48"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Are you a store owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If you would like to accept Netcoins at your store or service then please get in touch at support@netcoinfoundation.org You will be added to the wallet and websites upon the next update.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Êtes-vous le propriétaire d&apos;un commerce?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Si vous voulez accepter Netcoins dans votre commerce ou service, alors merci de nous en informer par mail : support@netcoinfoundation.org . Vous serez ajouté au portefeuille et aux sites internet au cours de la prochaine mise à jour.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Are you a store owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If you would like to accept FlapXcoins at your store or service then please get in touch at support@netcoinfoundation.org You will be added to the wallet and websites upon the next update.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Êtes-vous le propriétaire d&apos;un commerce?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Si vous voulez accepter FlapXcoins dans votre commerce ou service, alors merci de nous en informer par mail : support@netcoinfoundation.org . Vous serez ajouté au portefeuille et aux sites internet au cours de la prochaine mise à jour.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -2792,8 +2792,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+49"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;How would you like to see an Android Wallet developed for Netcoin? It&apos;s about time Netcoin got a little more mobile! If you agree with this then let us know by sending some coins to the address below.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Combien désirez-vous voir un portefeuille Android développer pour Netcoin ? C&apos;est le moment pour Netcoin de devenir un peu plus mobile! Si vous êtes d&apos;accord avec cela alors faites-le nous savoir en envoyant quelques coins à l&apos;adresse ci-dessous&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;How would you like to see an Android Wallet developed for FlapXcoin? It&apos;s about time FlapXcoin got a little more mobile! If you agree with this then let us know by sending some coins to the address below.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Combien désirez-vous voir un portefeuille Android développer pour FlapXcoin ? C&apos;est le moment pour FlapXcoin de devenir un peu plus mobile! Si vous êtes d&apos;accord avec cela alors faites-le nous savoir en envoyant quelques coins à l&apos;adresse ci-dessous&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+472"/>
@@ -2882,8 +2882,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+82"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Netcoin Block Explorer &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Exploreur de bloc Netcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;FlapXcoin Block Explorer &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Exploreur de bloc FlapXcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -3080,7 +3080,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The address to sign the message with (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse Netcoin (ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <translation>Entrer une adresse FlapXcoin (ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <source>Choose an address from the address book</source>
@@ -3110,8 +3110,8 @@ p, li { white-space: pre-wrap; }
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Netcoin address</source>
-        <translation>Signer le message afin de prouver l&apos;identité de votre adresse Netcoin</translation>
+        <source>Sign the message to prove you own this FlapXcoin address</source>
+        <translation>Signer le message afin de prouver l&apos;identité de votre adresse FlapXcoin</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -3139,22 +3139,22 @@ p, li { white-space: pre-wrap; }
         <translation>L&apos;adresse avec laquelle le message à été signé (ex: PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Netcoin address</source>
-        <translation>Vérifier le message afin de vous assurer qu&apos;il provient de l&apos;adresse Netcoin spécifiée</translation>
+        <source>Verify the message to ensure it was signed with the specified FlapXcoin address</source>
+        <translation>Vérifier le message afin de vous assurer qu&apos;il provient de l&apos;adresse FlapXcoin spécifiée</translation>
     </message>
     <message>
         <source>Reset all verify message fields</source>
         <translation>Réinitialiser tous les champs de vérification de message</translation>
     </message>
     <message>
-        <source>Enter a Netcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse Netcoin (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
+        <source>Enter a FlapXcoin address (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin (e.g. PBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Netcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
-        <translation>Entrer une adresse NetCoin</translation>
+        <source>Enter a FlapXcoin address (e.g. nBZ8YVV3XT3WWWd2a1jo4N9WePiwKB3mJE)</source>
+        <translation>Entrer une adresse FlapXcoin</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3163,8 +3163,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Netcoin signature</source>
-        <translation>Entrer une signature Netcoin</translation>
+        <source>Enter FlapXcoin signature</source>
+        <translation>Entrer une signature FlapXcoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -3363,8 +3363,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+10"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Stake For Education allows you to automatically send up to 50% of your stake to another Netcoin address after it matures.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter percentage to give and Netcoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Le Stake pour l&apos;Éducation vous permet d&apos;envoyer automatiquement jusqu&apos;à 50 % de votre Stake à une autre adresse Netcoin après qu’il murit.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;S’il vous plaît entrer un pourcentage à donner et entrez l’adresse Netcoin à donner. Les montants Min, Max et l’adresse de change sont optionnels.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Stake For Education allows you to automatically send up to 50% of your stake to another FlapXcoin address after it matures.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Please enter percentage to give and FlapXcoin address to give to. Min and Max amount and change address are optional.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span&gt;Le Stake pour l&apos;Éducation vous permet d&apos;envoyer automatiquement jusqu&apos;à 50 % de votre Stake à une autre adresse FlapXcoin après qu’il murit.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;S’il vous plaît entrer un pourcentage à donner et entrez l’adresse FlapXcoin à donner. Les montants Min, Max et l’adresse de change sont optionnels.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../charitydialog.cpp" line="-3"/>
@@ -3887,8 +3887,8 @@ S’il vous plaît vérifier l’address et essayer de nouveau.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show transaction on the Netcoin Block Explorer</source>
-        <translation>Voir la transaction dans l&apos;exploreur de bloc Netcoin</translation>
+        <source>Show transaction on the FlapXcoin Block Explorer</source>
+        <translation>Voir la transaction dans l&apos;exploreur de bloc FlapXcoin</translation>
     </message>
     <message>
         <location line="+148"/>
@@ -3968,8 +3968,8 @@ S’il vous plaît vérifier l’address et essayer de nouveau.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>Netcoin version</source>
-        <translation>Version Netcoin</translation>
+        <source>FlapXcoin version</source>
+        <translation>Version FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4024,7 +4024,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </source>
         <translatorcomment>%s, vous devez spécifier un rpcpassword dans le fichier de configuration:
  %s
@@ -4034,7 +4034,7 @@ rpcpassword=%s
 (Vous n&apos;avez pas besoin de vous rappeler ce mot de passe)
 Le nom d&apos;utilisateur et le mot de passe NE DOIVENT PAS être identique.
 Si le fichier n&apos;existe pas, créez-le avec les droits owner-readable-only.
-Il est aussi recommandé de spécifier alertnotify ainsi vous serez informé des problèmes; par exemple: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+Il est aussi recommandé de spécifier alertnotify ainsi vous serez informé des problèmes; par exemple: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </translatorcomment>
         <translation>%s, you must set a rpcpassword in the configuration file:
  %s
@@ -4045,7 +4045,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -4200,8 +4200,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Netcoin will not work properly.</source>
-        <translation>Avertissement: Veuillez vérifier la date et l&apos;heure de votre ordinateur. Netcoin ne pourra pas fonctionner correctement si l&apos;horloge est réglée de façon incorrecte.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong FlapXcoin will not work properly.</source>
+        <translation>Avertissement: Veuillez vérifier la date et l&apos;heure de votre ordinateur. FlapXcoin ne pourra pas fonctionner correctement si l&apos;horloge est réglée de façon incorrecte.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -4395,7 +4395,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Netcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, vous devez définir un mot de passe rpc &apos;rpcpassword&apos; au sein du fichier de configuration:
  %s
@@ -4406,7 +4406,7 @@ rpcpassword=%s
 Le nom d&apos;utilisateur et le mot de passe doivent IMPERATIVEMENT être différents.
 Si le fichier n&apos;existe pas, il est nécessaire de le créer, avec les droit de lecture au propriétaire seulement.
 Il est également recommandé d&apos;utiliser l&apos;option alertnotify afin d&apos;être notifié des problèmes;
-par exemple: alertnotify=echo %%s | mail -s &quot;Alerte Netcoin&quot; admin@foo.com
+par exemple: alertnotify=echo %%s | mail -s &quot;Alerte FlapXcoin&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -4531,13 +4531,13 @@ par exemple: alertnotify=echo %%s | mail -s &quot;Alerte Netcoin&quot; admin@foo
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  Netcoin is probably already running.</source>
-        <translation>Echec lors de la tentative de verrouillage des données du répertoire %s. L&apos;application Netcoin est probablement déjà en cours d&apos;exécution.</translation>
+        <source>Cannot obtain a lock on data directory %s.  FlapXcoin is probably already running.</source>
+        <translation>Echec lors de la tentative de verrouillage des données du répertoire %s. L&apos;application FlapXcoin est probablement déjà en cours d&apos;exécution.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>Netcoin</source>
-        <translation>Netcoin</translation>
+        <source>FlapXcoin</source>
+        <translation>FlapXcoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -4571,13 +4571,13 @@ par exemple: alertnotify=echo %%s | mail -s &quot;Alerte Netcoin&quot; admin@foo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Netcoin</source>
-        <translation>Erreur de chargement du fichier wallet.dat: le portefeuille nécessite une version plus récente de l&apos;application Netcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of FlapXcoin</source>
+        <translation>Erreur de chargement du fichier wallet.dat: le portefeuille nécessite une version plus récente de l&apos;application FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Netcoin to complete</source>
-        <translation>Le portefeuille nécessite d&apos;être réédité : Merci de relancer l&apos;application Netcoin</translation>
+        <source>Wallet needed to be rewritten: restart FlapXcoin to complete</source>
+        <translation>Le portefeuille nécessite d&apos;être réédité : Merci de relancer l&apos;application FlapXcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4646,8 +4646,8 @@ par exemple: alertnotify=echo %%s | mail -s &quot;Alerte Netcoin&quot; admin@foo
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. Netcoin is probably already running.</source>
-        <translation>Connexion au port %s impossible. L&apos;application Netcoin est probablement déjà en cours d&apos;exécution.</translation>
+        <source>Unable to bind to %s on this computer. FlapXcoin is probably already running.</source>
+        <translation>Connexion au port %s impossible. L&apos;application FlapXcoin est probablement déjà en cours d&apos;exécution.</translation>
     </message>
     <message>
         <location line="-97"/>
