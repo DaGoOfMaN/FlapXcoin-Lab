@@ -60,7 +60,7 @@ NetworkPage::NetworkPage(QWidget *parent) :
 void NetworkPage::updateMyWeight()
 {
     uint64_t nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
-    if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //netcoin GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
+    if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //flapx GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
         pwalletMain->GetStakeWeight(*pwalletMain, nMinWeight, nMaxWeight, nWeight);
 
     if (nLastCoinStakeSearchInterval && nWeight)

@@ -221,6 +221,7 @@ pip-log.txt
 .mr.developer.cfg
 flapxd
 flapx-qt
+flapx
 .qmake.stash
 Makefile
 Makefile.Debug

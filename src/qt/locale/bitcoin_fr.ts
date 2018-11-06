@@ -2587,8 +2587,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+34"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Exchange owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt; you would like to add FlapXcoins to your exchange please get in touch at support@netcoinfoundation.org.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Propriétaire de l&apos;échange ?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt;vous voulez ajouter FlapXcoins à votre échange, merci de nous en informer par mail : support@netcoinfoundation.org &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Exchange owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt; you would like to add FlapXcoins to your exchange please get in touch at support@flapxfoundation.org.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Propriétaire de l&apos;échange ?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If&lt;/span&gt;&lt;span&gt;vous voulez ajouter FlapXcoins à votre échange, merci de nous en informer par mail : support@flapxfoundation.org &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -2732,8 +2732,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+48"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Are you a store owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If you would like to accept FlapXcoins at your store or service then please get in touch at support@netcoinfoundation.org You will be added to the wallet and websites upon the next update.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Êtes-vous le propriétaire d&apos;un commerce?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Si vous voulez accepter FlapXcoins dans votre commerce ou service, alors merci de nous en informer par mail : support@netcoinfoundation.org . Vous serez ajouté au portefeuille et aux sites internet au cours de la prochaine mise à jour.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Are you a store owner?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;If you would like to accept FlapXcoins at your store or service then please get in touch at support@flapxfoundation.org You will be added to the wallet and websites upon the next update.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Êtes-vous le propriétaire d&apos;un commerce?&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span&gt;Si vous voulez accepter FlapXcoins dans votre commerce ou service, alors merci de nous en informer par mail : support@flapxfoundation.org . Vous serez ajouté au portefeuille et aux sites internet au cours de la prochaine mise à jour.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -4018,7 +4018,7 @@ S’il vous plaît vérifier l’address et essayer de nouveau.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=netcoinrpc
+rpcuser=flapxrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4029,7 +4029,7 @@ for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@fo
         <translatorcomment>%s, vous devez spécifier un rpcpassword dans le fichier de configuration:
  %s
 Il est recommandé d&apos;utiliser le mot de passe aléatoire suivant:
-rpcuser=netcoinrpc
+rpcuser=flapxrpc
 rpcpassword=%s
 (Vous n&apos;avez pas besoin de vous rappeler ce mot de passe)
 Le nom d&apos;utilisateur et le mot de passe NE DOIVENT PAS être identique.
@@ -4039,7 +4039,7 @@ Il est aussi recommandé de spécifier alertnotify ainsi vous serez informé des
         <translation>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=netcoinrpc
+rpcuser=flapxrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4050,18 +4050,18 @@ for example: alertnotify=echo %%s | mail -s &quot;FlapXcoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+26"/>
-        <source>Send command to -server or netcoind</source>
-        <translation>Envoyer la commande à -server ou netcoind</translation>
+        <source>Send command to -server or flapxd</source>
+        <translation>Envoyer la commande à -server ou flapxd</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Specify configuration file (default: netcoin.conf)</source>
-        <translation>Spécifie le fichier de configuration (par défaut : netcoin.conf)</translation>
+        <source>Specify configuration file (default: flapx.conf)</source>
+        <translation>Spécifie le fichier de configuration (par défaut : flapx.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: netcoind.pid)</source>
-        <translation>Spécifie le fichier pid (par défaut: netcoind.pid)</translation>
+        <source>Specify pid file (default: flapxd.pid)</source>
+        <translation>Spécifie le fichier pid (par défaut: flapxd.pid)</translation>
     </message>
     <message>
         <location line="+3"/>

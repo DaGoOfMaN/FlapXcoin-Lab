@@ -12,7 +12,7 @@
  */
  
 /** [VARS]
-	$text-color = #FFAA00
+	$text-color = #47B408
 	$main-color-l = #142930
 	$main-color-xl = #6D7B8D
 	$main-color-d = #342D7E
@@ -24,7 +24,7 @@
 	$shade-transparent-2 = rgba(0,0,0,50)
 	$main-color = #000000
 	$text-grey-d = #0c191d
-	$accent-color = #dca753
+	$accent-color = #47B408
 	$brightest-color = #fff
 	$input-border-color = #BCC6CC
 	$header-font = "Verdana, Geneva, sans-serif"
@@ -46,7 +46,7 @@ QDialog, QTableView{
 }
 
 #coinLogo {
-	qproperty-pixmap: url($themes-dir/default/netcoin.png);
+	qproperty-pixmap: url($themes-dir/default/flapx.png);
 	qproperty-alignment: 'AlignBottom | AlignLeft';
 }
 

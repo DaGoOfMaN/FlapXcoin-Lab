@@ -78,7 +78,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("netcoin"))
+    if(uri.scheme() != QString("flapx"))
         return false;
 
     SendCoinsRecipient rv;
@@ -123,13 +123,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert netcoin:// to netcoin:
+    // Convert flapx:// to flapx:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("netcoin://"))
+    if(uri.startsWith("flapx://"))
     {
-        uri.replace(0, 12, "netcoin:");
+        uri.replace(0, 12, "flapx:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -355,7 +355,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "netcoin.desktop";
+    return GetAutostartDir() / "flapx.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -420,7 +420,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
     header = tr("FlapXcoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  netcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  flapx-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 

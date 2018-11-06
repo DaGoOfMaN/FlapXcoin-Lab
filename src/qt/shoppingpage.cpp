@@ -468,33 +468,33 @@ void ShoppingPage::on_pushButton_4_clicked()
 //Useful links tab
 void ShoppingPage::on_pushButton_8_clicked()
 {
-    QString link="http://forum.netcoin.io//";
+    QString link="http://forum.flapx.io//";
     QDesktopServices::openUrl(QUrl(link));
 }
 
 void ShoppingPage::on_pushButton_9_clicked()
 {
-    QString link="http://netcoinfoundation.io/";
+    QString link="http://flapxfoundation.io/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
 void ShoppingPage::on_pushButton_10_clicked()
 {
-    QString link="http://netcoin.io/";
+    QString link="http://flapx.io/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
 //Development Site links
 void ShoppingPage::on_pushButton_clicked()
 {
-    QString link="http://netcoinfoundation.io/give/";
+    QString link="http://flapxfoundation.io/give/";
     QDesktopServices::openUrl(QUrl(link));
 }
 
 //Pools
 void ShoppingPage::on_pushButton_2_clicked()
 {
-    QString link="https://www.mining-dutch.nl/pools/netcoin.php";
+    QString link="https://www.mining-dutch.nl/pools/flapx.php";
     QDesktopServices::openUrl(QUrl(link));
 }
 
