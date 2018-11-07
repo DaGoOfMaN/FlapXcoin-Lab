@@ -95,7 +95,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
 
     resize(850, 500);
-    setWindowTitle(tr("FlapXcoin") + " 2.0 " + tr("Dirty"));
+    setWindowTitle(tr("Flapx") + " 2.1 " + tr("Dirty"));
 
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
@@ -453,7 +453,6 @@ void BitcoinGUI::createToolBars()
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
 
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    toolbar->setIconSize(QSize(48,48));
     toolbar->addAction(overviewAction);
     toolbar->addAction(sendCoinsAction);
     toolbar->addAction(receiveCoinsAction);
@@ -509,6 +508,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
         connect(clientModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
 
         overviewPage->setClientModel(clientModel);
+        networkPage->setClientModel(clientModel);
         rpcConsole->setClientModel(clientModel);
         addressBookPage->setOptionsModel(clientModel->getOptionsModel());
         receiveCoinsPage->setOptionsModel(clientModel->getOptionsModel());
@@ -527,6 +527,7 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
         transactionView->setModel(walletModel);
 
         // overviewPage->setModel(walletModel);
+        networkPage->setWalletModel(walletModel);
         overviewPage->setWalletModel(walletModel);
         addressBookPage->setModel(walletModel->getAddressTableModel());
         receiveCoinsPage->setModel(walletModel->getAddressTableModel());
@@ -1155,7 +1156,7 @@ void BitcoinGUI::updateWeight()
 void BitcoinGUI::updateStakingIcon()
 {
     // uint64_t nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
-    // if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //flapx GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
+    // if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //FlapXcoin GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
     //    pwalletMain->GetStakeWeight(*pwalletMain, nMinWeight, nMaxWeight, nWeight);
 
     updateWeight();

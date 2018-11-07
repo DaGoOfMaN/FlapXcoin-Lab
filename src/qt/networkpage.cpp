@@ -29,6 +29,8 @@
 #include <string>
 #include <QMenu>
 
+#define DECORATION_SIZE 64
+#define NUM_ITEMS 3
 
 using namespace json_spirit;
 extern CWallet* pwalletMain;
@@ -36,17 +38,23 @@ extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
 
 
+
 NetworkPage::NetworkPage(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::NetworkPage),
-      clientModel(0),
-      walletModel(0),
-      currentWeight(0),
-      currentNetworkWeight(0),
+    clientModel(0),
+    walletModel(0),
+    currentBalance(-1),
+    currentStake(0),
+    currentUnconfirmedBalance(-1),
+    currentImmatureBalance(-1),
+    currentWeight(0),
+    currentNetworkWeight(0),
 
 
-      filter(0)
-  {
+    filter(0)
+{
+
     ui->setupUi(this);
 
     if (GetBoolArg("-staking", true))
@@ -56,11 +64,25 @@ NetworkPage::NetworkPage(QWidget *parent) :
         timerMyWeight->start(30 * 1000);
         updateMyWeight();
     }
+
+
+
+
 }
+
+
+
+void NetworkPage::handleTransactionClicked(const QModelIndex &index)
+{
+    if(filter)
+        emit transactionClicked(filter->mapToSource(index));
+}
+
+
 void NetworkPage::updateMyWeight()
 {
     uint64_t nMinWeight = 0, nMaxWeight = 0, nWeight = 0;
-    if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //flapx GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
+    if (nLastCoinStakeSearchInterval && pwalletMain && !IsInitialBlockDownload()) //flapxcoin GetStakeWeight requires mutex lock on wallet which tends to freeze initial block downloads
         pwalletMain->GetStakeWeight(*pwalletMain, nMinWeight, nMaxWeight, nWeight);
 
     if (nLastCoinStakeSearchInterval && nWeight)
@@ -101,6 +123,48 @@ void NetworkPage::updateMyWeight()
         else
             ui->labelMyWeight->setText(tr("Not staking"));
     }
+}
+
+
+
+
+void NetworkPage::setWalletModel(WalletModel *model)
+{
+    this->walletModel = model;
+    if(model && model->getOptionsModel())
+    {
+        // Set up transaction list
+        filter = new TransactionFilterProxy();
+        filter->setSourceModel(model->getTransactionTableModel());
+        filter->setLimit(NUM_ITEMS);
+        filter->setDynamicSortFilter(true);
+        filter->setSortRole(Qt::EditRole);
+        filter->setShowInactive(false);
+        filter->sort(TransactionTableModel::Date, Qt::DescendingOrder);
+
+    }
+
+
+    // update statistics
+    updateStatistics();
+
+    //set up a timer to auto refresh every 30 seconds to update the statistics
+    QTimer *timerNetworkStats = new QTimer();
+    connect(timerNetworkStats, SIGNAL(timeout()), this, SLOT(updateStatistics()));
+    timerNetworkStats->start(30 * 1000);
+
+
+
+}
+
+
+// void OverviewPage::setModel(WalletModel *model)
+void NetworkPage::setClientModel(ClientModel *model)
+{
+    // this->model = model;
+    this->clientModel = model;
+
+
 }
 
 void NetworkPage::updateStatistics()
@@ -208,15 +272,15 @@ void NetworkPage::updateStatistics()
 
     if(volume > volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
     }
     else if(volume < volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
     }
     else
     {
-        ui->volumeBox->setText(qVolume + " FLAPX");
+        ui->volumeBox->setText(qVolume + " NET");
     }
 
     updatePrevious(nHeight, nMinWeight, nNetworkWeight, nSubsidy, pHardness, pHardness2, pPawrate2, Qlpawrate, peers, volume);
@@ -247,3 +311,5 @@ NetworkPage::~NetworkPage()
 {
     delete ui;
 }
+
+

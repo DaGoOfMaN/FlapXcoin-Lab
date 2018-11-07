@@ -1,14 +1,12 @@
 ﻿#ifndef NETWORKPAGE_H
 #define NETWORKPAGE_H
 
-
+#include <QWidget>
 #include "clientmodel.h"
 #include "main.h"
 #include "wallet.h"
 #include "base58.h"
 
-
-#include <QWidget>
 #include <QDir>
 #include <QFile>
 #include <QProcess>
@@ -46,7 +44,7 @@ public:
 
     void setClientModel(ClientModel *clientModel);
     void setWalletModel(WalletModel *walletModel);
-
+    void showOutOfSyncWarning(bool fShow);
 
     int heightPrevious;
     int connectionPrevious;
@@ -66,6 +64,7 @@ public slots:
     void updatePrevious(int, int, int, double, double, double, double, QString, int, int);
 
 signals:
+    void transactionClicked(const QModelIndex &index);
 
 private:
     Ui::NetworkPage *ui;
@@ -73,6 +72,11 @@ private:
     WalletModel *walletModel;
     CWallet *wallet;
     ClientModel *modelStatistics;
+    qint64 currentBalance;
+    qint64 currentStake;
+    qint64 interest;
+    qint64 currentUnconfirmedBalance;
+    qint64 currentImmatureBalance;
     QMenu *contextMenu;
 
     //Weight label
@@ -84,11 +88,11 @@ private:
     TransactionFilterProxy *filter;
 
 private slots:
-    //void updateDisplayUnit();
-    //void updateAlerts(const QString &warnings);
+    void handleTransactionClicked(const QModelIndex &index);
     void updateMyWeight();
 
 signals:
+    void stakeForCharitySignal();
 };
 
 #endif // NETWORKPAGE_H
