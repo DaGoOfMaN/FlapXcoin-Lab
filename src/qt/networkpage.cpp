@@ -17,6 +17,7 @@
 #include "wallet.h"
 #include "bitcoinrpc.h"
 #include "askpassphrasedialog.h"
+#include "util.h"
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
@@ -88,9 +89,6 @@ NetworkPage::NetworkPage(QWidget *parent) :
         timerMyWeight->start(30 * 1000);
         updateMyWeight();
     }
-
-
-
 
 }
 
@@ -296,15 +294,15 @@ void NetworkPage::updateStatistics()
 
     if(volume > volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
     }
     else if(volume < volumePrevious)
     {
-        ui->volumeBox->setText("<b>" + qVolume + " NET" + "</font></b>");
+        ui->volumeBox->setText("<b>" + qVolume + " FLAPX" + "</font></b>");
     }
     else
     {
-        ui->volumeBox->setText(qVolume + " NET");
+        ui->volumeBox->setText(qVolume + " FLAPX");
     }
 
     updatePrevious(nHeight, nMinWeight, nNetworkWeight, nSubsidy, pHardness, pHardness2, pPawrate2, Qlpawrate, peers, volume);
@@ -344,7 +342,7 @@ void NetworkPage::updatePlot(int count)
 
     if(fDebug) { printf("Plot: Getting Ready: pindexBest: %p\n", pindexBest); }
 
-        bool fProofOfStake = (nBestHeight > 100 + 100);
+        bool fProofOfStake = (nBestHeight > 100000 + 100);
     if (fProofOfStake)
         ui->diffplot->yAxis->setLabel("24H Network Weight");
         else

@@ -45,6 +45,7 @@ public:
     void setClientModel(ClientModel *clientModel);
     void setWalletModel(WalletModel *walletModel);
     void showOutOfSyncWarning(bool fShow);
+    void updatePlot(int count);
 
     int heightPrevious;
     int connectionPrevious;
@@ -62,7 +63,6 @@ public slots:
     void setStatistics(ClientModel *modelStatistics);
     void updateStatistics();
     void updatePrevious(int, int, int, double, double, double, double, QString, int, int);
-    void updatePlot(int count);
 signals:
     void transactionClicked(const QModelIndex &index);
 

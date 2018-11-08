@@ -18,7 +18,7 @@ ClientModel::ClientModel(OptionsModel *optionsModel, QObject *parent) :
     QObject(parent), optionsModel(optionsModel),
     cachedNumBlocks(0), numBlocksAtStartup(-1), pollTimer(0)
 {
-    // numBlocksAtStartup = -1;
+    numBlocksAtStartup = -1;
 
     pollTimer = new QTimer(this);
     pollTimer->setInterval(MODEL_UPDATE_DELAY);
@@ -70,7 +70,7 @@ void ClientModel::updateTimer()
     // Some quantities (such as number of blocks) change so fast that we don't want to be notified for each change.
     // Periodically check and update with a timer.
     int newNumBlocks = getNumBlocks();
-    // int newNumBlocksOfPeers = getNumBlocksOfPeers();
+    int newNumBlocksOfPeers = getNumBlocks();
 
     if(cachedNumBlocks != newNumBlocks)
     {
@@ -104,7 +104,7 @@ void ClientModel::updateAlert(const QString &hash, int status)
 
     // Emit a numBlocksChanged when the status message changes,
     // so that the view recomputes and updates the status bar.
-    // emit numBlocksChanged(getNumBlocks(), getNumBlocksOfPeers());
+    // emit numBlocksChanged(getNumBlocks(), getNumBlocks());
     emit alertsChanged(getStatusBarWarnings());
 }
 
@@ -118,12 +118,6 @@ bool ClientModel::inInitialBlockDownload() const
     return IsInitialBlockDownload();
 }
 
-/*
-int ClientModel::getNumBlocksOfPeers() const
-{
-    return GetNumBlocksOfPeers();
-}
-*/
 
 QString ClientModel::getStatusBarWarnings() const
 {

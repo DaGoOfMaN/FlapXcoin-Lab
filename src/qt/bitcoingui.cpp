@@ -498,13 +498,12 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
         setNumConnections(clientModel->getNumConnections());
         connect(clientModel, SIGNAL(numConnectionsChanged(int)), this, SLOT(setNumConnections(int)));
 
-        // setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers());
+        // setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocks());
         // connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
 
-        setNumBlocks(clientModel->getNumBlocks());
-        connect(clientModel, SIGNAL(numBlocksChanged(int)), this, SLOT(setNumBlocks(int)));
+        setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocks());
+        connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
 
-        // Report errors from network/worker thread
         connect(clientModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
 
         overviewPage->setClientModel(clientModel);
@@ -629,7 +628,8 @@ void BitcoinGUI::setNumConnections(int count)
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to FlapXcoin network", "", count));
 }
 
-void BitcoinGUI::setNumBlocks(int count)
+void BitcoinGUI::setNumBlocks(int count, int getNumBlocks)
+
 {
     // don't show / hide progress bar and its label if we have no connection to the network
     if (!clientModel || clientModel->getNumConnections() == 0)
@@ -801,6 +801,10 @@ void BitcoinGUI::setNumBlocks(int count)
 
 
     progressBar->setToolTip(tooltip);
+    if(GetBoolArg("-chart", true) && count > 0 && getNumBlocks > 0)
+    {
+        networkPage->updatePlot(count);
+    }
 }
 
 void BitcoinGUI::error(const QString &title, const QString &message, bool modal)
