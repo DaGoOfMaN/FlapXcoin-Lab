@@ -62,7 +62,7 @@ public slots:
     void setStatistics(ClientModel *modelStatistics);
     void updateStatistics();
     void updatePrevious(int, int, int, double, double, double, double, QString, int, int);
-
+    void updatePlot(int count);
 signals:
     void transactionClicked(const QModelIndex &index);
 
@@ -83,6 +83,9 @@ private:
     qint64 currentWeight;
     qint64 currentNetworkWeight;
     qint64 currentMyWeight;
+
+    QVector<double> vX;
+    QVector<double> vY;
 
     TxViewDelegate *txdelegate;
     TransactionFilterProxy *filter;

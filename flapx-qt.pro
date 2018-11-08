@@ -303,6 +303,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/clientversion.h \
     src/qt/shoppingpage.h \
     src/qt/networkpage.h \
+    src/qt/qcustomplot.h \
     src/threadsafety.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
@@ -389,6 +390,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/zerocoin/SpendMetaData.cpp \
     src/zerocoin/ZeroTest.cpp \
     src/qt/networkpage.cpp \
+    src/qt/qcustomplot.cpp \
     src/qt/shoppingpage.cpp
 
 RESOURCES += \
